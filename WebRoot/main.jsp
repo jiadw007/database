@@ -23,7 +23,7 @@
   Payment Method<br />
   <html:link action="manageCredit.do">Manage Payment Options</html:link><br />
   <html:link page="/addNewCredit.jsp">Add a Credit or Debit Card</html:link><br />
-  <logic:equal name="failed" value="1">
+  <logic:equal name="failed" value="0">
   Your Order has been placed!
   </logic:equal>
   </body>

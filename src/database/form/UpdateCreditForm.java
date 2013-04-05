@@ -50,17 +50,7 @@ public class UpdateCreditForm extends ValidatorForm {
 	 * Generated Methods
 	 */
     
-	/** 
-	 * Method validate
-	 * @param mapping
-	 * @param request
-	 * @return ActionErrors
-	 */
-	public ActionErrors validate(ActionMapping mapping,
-			HttpServletRequest request) {
-		// TODO Auto-generated method stub
-		return null;
-	}
+	
 
 	public String getNameoncard() {
 		return nameoncard;

@@ -30,7 +30,7 @@
   <tr>
   <td>cardCVV2:</td>
   <td><html:text property="cardcvv2" value="<%=String.valueOf(credit.getCaredCVV2()) %>"/></td>
-  <td><html:errors property="firstname"/></td>
+  <td><html:errors property="cardcvv2"/></td>
   </tr>
   <tr>
   <td>cardType:</td>

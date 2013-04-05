@@ -7,7 +7,7 @@
 <form-validation>
     <formset>
         
-        <form name="addNewCreditForm">
+        <form name="updateCreditForm">
         <field property="nameoncard" depends="required">
         <msg name="required" key="errors.required"/>
         <arg0 name="required" key="info.nameoncard"/>

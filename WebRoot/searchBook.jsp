@@ -35,13 +35,15 @@
 		<td>AUTHOR:</td>
 		<td><bean:write name="book" property="author"/></td>
 		</tr>
+		<tr>
 		<td>PUBLISHTIME</td>
 		<td><bean:write name="book" property="publishtime"/></td>
+		</tr>
 		</table>
 		</logic:iterate>
 		</logic:equal>
 		<logic:equal name="search" value="0">
-		The book does not exist
+		The book does not exist, or check the attribute and value
 		</logic:equal>
 		</logic:present>
 		<logic:notEmpty name="shoppingcart">

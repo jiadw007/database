@@ -156,9 +156,15 @@ public class UserDao implements IUserDao{
 	public ArrayList searchBook(String attribute, String value) {
 	
 		// TODO Auto-generated method stub
-		String sql="select * from Book where "+attribute+"='"+value+"'";
+		String sql="select * from Book where "+attribute+" like '%"+value+"%'";
 		if(attribute.equals("isbn")){
-			sql="select * from Book where "+attribute+"="+Long.parseLong(value);
+			try{
+				long isbn1=Long.parseLong(value);
+				sql="select * from Book where "+attribute+"="+isbn1;
+			}catch(NumberFormatException e){
+				return null;
+			}
+			
 		}
 		String url="jdbc:oracle:thin:@oracle.cise.ufl.edu:1521:orcl";
 		//System.out.println(attribute);
@@ -207,25 +213,30 @@ public class UserDao implements IUserDao{
 		System.out.println(time);
 		
 		if(isbn!=""){
+			try{
+				long isbn1=Long.parseLong(isbn);
+				sql1=sql+"isbn="+isbn1;
+			}catch(NumberFormatException e){
+				return null;
+			}
 			
-			sql1=sql+"isbn="+Long.parseLong(isbn);
 		}
 		if(author!=""){
 			
 			if(sql1!=sql){
 				
-				sql1=sql1+" and author= '"+author+"'";
+				sql1=sql1+" and author likr '%"+author+"%'";
 			}else{
-				sql1=sql+"author= '"+author+"'";
+				sql1=sql+"author like '%"+author+"%'";
 			}
 		}
 		
 		if(title!=""){
 			
 			if(sql1!=sql){
-				sql1=sql1+" and booktitle= '"+title+"'";
+				sql1=sql1+" and booktitle like '%"+title+"%'";
 			}else{
-				sql1=sql+"booktitle= '"+title+"'";
+				sql1=sql+"booktitle like '%"+title+"%'";
 			}
 		}
 

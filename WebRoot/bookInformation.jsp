@@ -1,4 +1,4 @@
-<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%@ page language="java" import="java.util.*" import="po.Book"pageEncoding="UTF-8"%>
 <%@ taglib uri="http://struts.apache.org/tags-bean" prefix="bean"%> 
 <%@ taglib uri="http://struts.apache.org/tags-html" prefix="html"%>
 <%@ taglib uri="http://struts.apache.org/tags-logic" prefix="logic"%> 
@@ -13,6 +13,10 @@
   
   <body>
     <logic:equal name="search" value="1">
+    <%Book b=(Book)request.getSession().getAttribute("searchBook"); 
+      System.out.println(b);
+      String img=b.getFile();
+      %>
 		<table>
 		<tr>
 		<td>ISBN:</td>
@@ -44,7 +48,7 @@
 		</tr>
 		<tr>
 		<td>IMAGE</td>
-		<td><bean:write name="searchBook" property="file"/></td>
+		<td><img src="<%=b.getFile()%>"></td>
 		</tr>
 		</table>
 		<html:link page="/addToShoppingCart.jsp">Add to Cart</html:link>
