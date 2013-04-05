@@ -6,95 +6,139 @@ import java.sql.Date;
 
 public class Book {
 	
-	Integer BookSKU;
-	long ISBN;
-	Integer StockQuantity;
-	Double UnitPrice;
-	String BookTitle;
-	String Author;
-	String PublishTime;
-	Date CreateOn;
-	String File;
-	String Description;
-	public Integer getBookSKU() {
-		return BookSKU;
-	}
-	public void setBookSKU(Integer bookSKU) {
-		BookSKU = bookSKU;
-	}
-	public long getISBN() {
-		return ISBN;
-	}
-	public void setISBN(long iSBN) {
-		ISBN = iSBN;
-	}
-	public Integer getStockQuantity() {
-		return StockQuantity;
-	}
-	public void setStockQuantity(Integer stockQuantity) {
-		StockQuantity = stockQuantity;
-	}
-	public Double getUnitPrice() {
-		return UnitPrice;
-	}
-	public void setUnitPrice(Double unitPrice) {
-		UnitPrice = unitPrice;
-	}
-	public String getBookTitle() {
-		return BookTitle;
-	}
-	public void setBookTitle(String bookTitle) {
-		BookTitle = bookTitle;
-	}
-	public String getAuthor() {
-		return Author;
-	}
-	public void setAuthor(String author) {
-		Author = author;
-	}
-	public String getPublishTime() {
-		return PublishTime;
-	}
-	public void setPublishTime(String publishTime) {
-		PublishTime = publishTime;
-	}
-	public Date getCreateOn() {
-		return CreateOn;
-	}
-	public void setCreateOn(Date createOn) {
-		CreateOn = createOn;
-	}
-	
-	public String getFile() {
-		return File;
-	}
-	public void setFile(String file) {
-		File = file;
-	}
-	
-	public String getDescription() {
-		return Description;
-	}
-	public void setDescription(String description) {
-		Description = description;
-	}
-	public Book() {
+	private int booksku;
+	private long isbn;
+	private int stockquantity;
+	private Double unitprice;
+	private String booktitle;
+	private String author;
+	private String publishtime;
+	private Date createon;
+	public Book(int booksku, long isbn, int stockquantity, Double unitprice) {
 		super();
+		this.booksku = booksku;
+		this.isbn = isbn;
+		this.stockquantity = stockquantity;
+		this.unitprice = unitprice;
 	}
+	private String file;
+	private String description;
 	
+	
+	public Book(long isbn, int stockquantity, Double unitprice,
+			String booktitle, String author, String publishtime, String file,
+			String description) {
+		super();
+		this.isbn = isbn;
+		this.stockquantity = stockquantity;
+		this.unitprice = unitprice;
+		this.booktitle = booktitle;
+		this.author = author;
+		this.publishtime = publishtime;
+		this.file = file;
+		this.description = description;
+	}
 	public Book(long iSBN, Integer stockQuantity, Double unitPrice,
 			String bookTitle, String author, String publishTime, Date createOn,
 			String file, String description) {
 		super();
-		ISBN = iSBN;
-		StockQuantity = stockQuantity;
-		UnitPrice = unitPrice;
-		BookTitle = bookTitle;
-		Author = author;
-		PublishTime = publishTime;
-		CreateOn = createOn;
-		File = file;
-		Description = description;
+		isbn = iSBN;
+		stockquantity = stockQuantity;
+		unitprice = unitPrice;
+		booktitle = bookTitle;
+		this.author = author;
+		publishtime = publishTime;
+		createon = createOn;
+		this.file = file;
+		this.description = description;
 	}
+	public Book(int booksku,long iSBN, Integer stockQuantity, Double unitPrice,
+			String bookTitle, String author, String publishTime, 
+			String file, String description) {
+		
+		this.booksku=booksku;
+		isbn = iSBN;
+		stockquantity = stockQuantity;
+		unitprice = unitPrice;
+		booktitle = bookTitle;
+		this.author = author;
+		publishtime = publishTime;
+		this.file = file;
+		this.description = description;
+	}
+	public Book(int bookSKU, long iSBN, int stockQuantity,
+			Double unitPrice, String bookTitle, String author) {
+		super();
+		booksku = bookSKU;
+		isbn = iSBN;
+		stockquantity = stockQuantity;
+		unitprice = unitPrice;
+		booktitle = bookTitle;
+		this.author = author;
+	}
+	public Book() {
+		// TODO Auto-generated constructor stub
+	}
+	public int getBooksku() {
+		return booksku;
+	}
+	public void setBooksku(int booksku) {
+		this.booksku = booksku;
+	}
+	public long getIsbn() {
+		return isbn;
+	}
+	public void setIsbn(long isbn) {
+		this.isbn = isbn;
+	}
+	public int getStockquantity() {
+		return stockquantity;
+	}
+	public void setStockquantity(int stockquantity) {
+		this.stockquantity = stockquantity;
+	}
+	public Double getUnitprice() {
+		return unitprice;
+	}
+	public void setUnitprice(Double unitprice) {
+		this.unitprice = unitprice;
+	}
+	public String getBooktitle() {
+		return booktitle;
+	}
+	public void setBooktitle(String booktitle) {
+		this.booktitle = booktitle;
+	}
+	public String getAuthor() {
+		return author;
+	}
+	public void setAuthor(String author) {
+		this.author = author;
+	}
+	public String getPublishtime() {
+		return publishtime;
+	}
+	public void setPublishtime(String publishtime) {
+		this.publishtime = publishtime;
+	}
+	public Date getCreateon() {
+		return createon;
+	}
+	public void setCreateon(Date createon) {
+		this.createon = createon;
+	}
+	public String getFile() {
+		return file;
+	}
+	public void setFile(String file) {
+		this.file = file;
+	}
+	public String getDescription() {
+		return description;
+	}
+	public void setDescription(String description) {
+		this.description = description;
+	}
+	
 	
 }

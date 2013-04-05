@@ -34,12 +34,10 @@ public class RegisterAction extends Action {
 	 * Generated Methods
 	 */
     private IUserDao udao;
-    
-    
+   
 	public IUserDao getUdao() {
 		return udao;
 	}
-
 
 	public void setUdao(IUserDao udao) {
 		this.udao = udao;
@@ -80,17 +78,27 @@ public class RegisterAction extends Action {
 			Timestamp timestamp=new Timestamp(System.currentTimeMillis());
 			
 			Address address=new Address(lastname,firstname,state,city,zipcode,company,phonenumber,date,addrline1,addrline2);
-			udao.insertAddress(address);
+			boolean flag1=udao.insertAddress(address);
 			User user2=new User(username,password,passwordsalt,email,timestamp);
-			udao.insertUser(user2);
+			boolean flag2=udao.insertUser(user2);
+			//System.out.println("insert");
 			request.getSession().setAttribute("user",user);
-			return new ActionForward("/index.jsp");
+			if(flag1 &&flag2){
+				return new ActionForward("/index.jsp");
+			}else{
+				ActionMessages errors=new ActionMessages();
+				ActionMessage error=new ActionMessage("error.register",username);
+				errors.add("register",error);
+				this.saveErrors(request, errors);
+				return new ActionForward("/register.jsp");
+			}
+			    
 		}else{
 			ActionMessages errors=new ActionMessages();
 			ActionMessage error=new ActionMessage("error.register",username);
 			errors.add("register",error);
 			this.saveErrors(request, errors);
-			return mapping.getInputForward();	
+			return new ActionForward("/register.jsp");	
 			
 		}
 	}

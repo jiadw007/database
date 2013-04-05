@@ -1,0 +1,724 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE form-validation PUBLIC
+          "-//Apache Software Foundation//DTD Commons Validator Rules Configuration 1.1.3//EN"
+          "http://jakarta.apache.org/commons/dtds/validator_1_1_3.dtd">
+          
+<form-validation>
+    <formset>
+        
+        <form name="addNewCreditForm">
+        <field property="nameoncard" depends="required">
+        <msg name="required" key="errors.required"/>
+        <arg0 name="required" key="info.nameoncard"/>
+        </field>
+        <field property="cardcvv2" depends="required,integer,minlength,maxlength">
+        <msg name="required" key="errors.required"/>
+        <arg0 name="required" key="info.cardcvv2"/>
+        <msg name="integer" key="errors.integer"/>
+        <arg0 name="integer" key="info.cardcvv2"/>
+         <msg name="minlength" key="errors.minlength"/>
+        <arg0 name="minlength" key="info.cardcvv2"/>
+        <arg1 name="minlength" key="${var:minlength}" resource="false"/>
+        <var>
+                   <var-name>minlength</var-name>
+                   <var-value>3</var-value>
+               </var>
+        <msg name="maxlength" key="errors.maxlength"/>
+        <arg0 name="maxlength" key="info.cardcvv2"/>
+        <arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+        <var>
+                   <var-name>maxlength</var-name>
+                   <var-value>3</var-value>
+               </var>
+        </field>
+        <field property="lastname" depends="required,maxlength">
+        <msg name="required" key="errors.required"/>
+        <arg0 name="required" key="info.lastname"/>
+        <msg name="maxlength" key="errors.maxlength"/>
+        <arg0 name="maxlength" key="info.lastname"/>
+        <arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+        <var>
+                   <var-name>maxlength</var-name>
+                   <var-value>15</var-value>
+               </var>
+        </field>
+        <field property="firstname" depends="required,maxlength">
+        <msg name="required" key="errors.required"/>
+        <arg0 name="required" key="info.firstname"/>
+         <msg name="maxlength" key="errors.maxlength"/>
+        <arg0 name="maxlength" key="info.firstname"/>
+        <arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+        <var>
+                   <var-name>maxlength</var-name>
+                   <var-value>15</var-value>
+               </var>
+        </field>
+        <field property="phonenumber" depends="required,maxlength">
+        <msg name="required" key="errors.required"/>
+        <arg0 name="required" key="info.phone"/>
+         <msg name="maxlength" key="errors.maxlength"/>
+        <arg0 name="maxlength" key="info.phone"/>
+        <arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+        <var>
+                   <var-name>maxlength</var-name>
+                   <var-value>15</var-value>
+               </var>
+        </field>
+        <field property="state" depends="required,maxlength">
+        <msg name="required" key="errors.required"/>
+        <arg0 name="required" key="info.state"/>
+        <msg name="maxlength" key="errors.maxlength"/>
+        <arg0 name="maxlength" key="info.state"/>
+        <arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+        <var>
+                   <var-name>maxlength</var-name>
+                   <var-value>10</var-value>
+               </var>
+        </field>
+        <field property="city" depends="required,maxlength">
+        <msg name="required" key="errors.required"/>
+        <arg0 name="required" key="info.city"/>
+         <msg name="maxlength" key="errors.maxlength"/>
+        <arg0 name="maxlength" key="info.city"/>
+        <arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+        <var>
+                   <var-name>maxlength</var-name>
+                   <var-value>50</var-value>
+               </var>
+        </field>
+        <field property="zipcode" depends="required,integer">
+        <msg name="required" key="errors.required"/>
+        <arg0 name="required" key="info.zipcode"/>
+        <msg name="integer" key="errors.integer"/>
+        <arg0 name="integer" key="info.zipcode"/>
+        </field>
+        <field property="company" depends="required,maxlength">
+        <msg name="required" key="errors.required"/>
+        <arg0 name="required" key="info.company"/>
+         <msg name="maxlength" key="errors.maxlength"/>
+        <arg0 name="maxlength" key="info.company"/>
+        <arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+        <var>
+                   <var-name>maxlength</var-name>
+                   <var-value>30</var-value>
+               </var>
+        </field>
+        <field property="addr1" depends="required,maxlength">
+        <msg name="required" key="errors.required"/>
+        <arg0 name="required" key="info.addressline1"/>
+         <msg name="maxlength" key="errors.maxlength"/>
+        <arg0 name="maxlength" key="info.addressline1"/>
+        <arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+        <var>
+                   <var-name>maxlength</var-name>
+                   <var-value>50</var-value>
+               </var>
+        </field>
+        <field property="addr2" depends="required,maxlength">
+        <msg name="required" key="errors.required"/>
+        <arg0 name="required" key="info.addressline2"/>
+         <msg name="maxlength" key="errors.maxlength"/>
+        <arg0 name="maxlength" key="info.addressline2"/>
+        <arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+        <var>
+                   <var-name>maxlength</var-name>
+                   <var-value>50</var-value>
+               </var>
+        </field>
+        
+        </form>
+        
+        <form name="addNewCreditForm">
+        <field property="nameoncard" depends="required">
+        <msg name="required" key="errors.required"/>
+        <arg0 name="required" key="info.nameoncard"/>
+        </field>
+        <field property="cardcvv2" depends="required,integer,minlength,maxlength">
+        <msg name="required" key="errors.required"/>
+        <arg0 name="required" key="info.cardcvv2"/>
+        <msg name="integer" key="errors.integer"/>
+        <arg0 name="integer" key="info.cardcvv2"/>
+         <msg name="minlength" key="errors.minlength"/>
+        <arg0 name="minlength" key="info.cardcvv2"/>
+        <arg1 name="minlength" key="${var:minlength}" resource="false"/>
+        <var>
+                   <var-name>minlength</var-name>
+                   <var-value>3</var-value>
+               </var>
+        <msg name="maxlength" key="errors.maxlength"/>
+        <arg0 name="maxlength" key="info.cardcvv2"/>
+        <arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+        <var>
+                   <var-name>maxlength</var-name>
+                   <var-value>3</var-value>
+               </var>
+        </field>
+        <field property="cardnumber" depends="required,long">
+        <msg name="required" key="errors.required"/>
+        <arg0 name="required" key="info.cardnumber"/>
+        <msg name="long" key="errors.long"/>
+        <arg0 name="long" key="info.cardnumber"/>
+        </field>
+        <field property="lastname" depends="required,maxlength">
+        <msg name="required" key="errors.required"/>
+        <arg0 name="required" key="info.lastname"/>
+        <msg name="maxlength" key="errors.maxlength"/>
+        <arg0 name="maxlength" key="info.lastname"/>
+        <arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+        <var>
+                   <var-name>maxlength</var-name>
+                   <var-value>15</var-value>
+               </var>
+        </field>
+        <field property="firstname" depends="required,maxlength">
+        <msg name="required" key="errors.required"/>
+        <arg0 name="required" key="info.firstname"/>
+         <msg name="maxlength" key="errors.maxlength"/>
+        <arg0 name="maxlength" key="info.firstname"/>
+        <arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+        <var>
+                   <var-name>maxlength</var-name>
+                   <var-value>15</var-value>
+               </var>
+        </field>
+        <field property="phonenumber" depends="required,maxlength">
+        <msg name="required" key="errors.required"/>
+        <arg0 name="required" key="info.phone"/>
+         <msg name="maxlength" key="errors.maxlength"/>
+        <arg0 name="maxlength" key="info.phone"/>
+        <arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+        <var>
+                   <var-name>maxlength</var-name>
+                   <var-value>15</var-value>
+               </var>
+        </field>
+        <field property="state" depends="required,maxlength">
+        <msg name="required" key="errors.required"/>
+        <arg0 name="required" key="info.state"/>
+        <msg name="maxlength" key="errors.maxlength"/>
+        <arg0 name="maxlength" key="info.state"/>
+        <arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+        <var>
+                   <var-name>maxlength</var-name>
+                   <var-value>10</var-value>
+               </var>
+        </field>
+        <field property="city" depends="required,maxlength">
+        <msg name="required" key="errors.required"/>
+        <arg0 name="required" key="info.city"/>
+         <msg name="maxlength" key="errors.maxlength"/>
+        <arg0 name="maxlength" key="info.city"/>
+        <arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+        <var>
+                   <var-name>maxlength</var-name>
+                   <var-value>50</var-value>
+               </var>
+        </field>
+        <field property="zipcode" depends="required,integer">
+        <msg name="required" key="errors.required"/>
+        <arg0 name="required" key="info.zipcode"/>
+        <msg name="integer" key="errors.integer"/>
+        <arg0 name="integer" key="info.zipcode"/>
+        </field>
+        <field property="company" depends="required,maxlength">
+        <msg name="required" key="errors.required"/>
+        <arg0 name="required" key="info.company"/>
+         <msg name="maxlength" key="errors.maxlength"/>
+        <arg0 name="maxlength" key="info.company"/>
+        <arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+        <var>
+                   <var-name>maxlength</var-name>
+                   <var-value>30</var-value>
+               </var>
+        </field>
+        <field property="addrline1" depends="required,maxlength">
+        <msg name="required" key="errors.required"/>
+        <arg0 name="required" key="info.addressline1"/>
+         <msg name="maxlength" key="errors.maxlength"/>
+        <arg0 name="maxlength" key="info.addressline1"/>
+        <arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+        <var>
+                   <var-name>maxlength</var-name>
+                   <var-value>50</var-value>
+               </var>
+        </field>
+        <field property="addrline2" depends="required,maxlength">
+        <msg name="required" key="errors.required"/>
+        <arg0 name="required" key="info.addressline2"/>
+         <msg name="maxlength" key="errors.maxlength"/>
+        <arg0 name="maxlength" key="info.addressline2"/>
+        <arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+        <var>
+                   <var-name>maxlength</var-name>
+                   <var-value>50</var-value>
+               </var>
+        </field>
+        
+        </form>
+    
+        <form name="updateAddressForm">
+        <field property="lastname" depends="required,maxlength">
+        <msg name="required" key="errors.required"/>
+        <arg0 name="required" key="info.lastname"/>
+         <msg name="maxlength" key="errors.maxlength"/>
+        <arg0 name="maxlength" key="info.lastname"/>
+        <arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+        <var>
+                   <var-name>maxlength</var-name>
+                   <var-value>15</var-value>
+               </var>
+        </field>
+        <field property="firstname" depends="required,maxlength">
+        <msg name="required" key="errors.required"/>
+        <arg0 name="required" key="info.firstname"/>
+         <msg name="maxlength" key="errors.maxlength"/>
+        <arg0 name="maxlength" key="info.firstname"/>
+        <arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+        <var>
+                   <var-name>maxlength</var-name>
+                   <var-value>15</var-value>
+               </var>
+        </field>
+        <field property="phonenumber" depends="required,maxlength">
+        <msg name="required" key="errors.required"/>
+        <arg0 name="required" key="info.phone"/>
+         <msg name="maxlength" key="errors.maxlength"/>
+        <arg0 name="maxlength" key="info.phone"/>
+        <arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+        <var>
+                   <var-name>maxlength</var-name>
+                   <var-value>15</var-value>
+               </var>
+        </field>
+        <field property="state" depends="required,maxlength">
+        <msg name="required" key="errors.required"/>
+        <arg0 name="required" key="info.state"/>
+        <msg name="maxlength" key="errors.maxlength"/>
+        <arg0 name="maxlength" key="info.state"/>
+        <arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+        <var>
+                   <var-name>maxlength</var-name>
+                   <var-value>10</var-value>
+               </var>
+        </field>
+        <field property="city" depends="required,maxlength">
+        <msg name="required" key="errors.required"/>
+        <arg0 name="required" key="info.city"/>
+         <msg name="maxlength" key="errors.maxlength"/>
+        <arg0 name="maxlength" key="info.city"/>
+        <arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+        <var>
+                   <var-name>maxlength</var-name>
+                   <var-value>50</var-value>
+               </var>
+        </field>
+        <field property="zipcode" depends="required,integer">
+        <msg name="required" key="errors.required"/>
+        <arg0 name="required" key="info.zipcode"/>
+        <msg name="integer" key="errors.integer"/>
+        <arg0 name="integer" key="info.zipcode"/>
+        </field>
+        <field property="company" depends="required,maxlength">
+        <msg name="required" key="errors.required"/>
+        <arg0 name="required" key="info.company"/>
+         <msg name="maxlength" key="errors.maxlength"/>
+        <arg0 name="maxlength" key="info.company"/>
+        <arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+        <var>
+                   <var-name>maxlength</var-name>
+                   <var-value>30</var-value>
+               </var>
+        </field>
+        <field property="addr1" depends="required,maxlength">
+        <msg name="required" key="errors.required"/>
+        <arg0 name="required" key="info.addressline1"/>
+         <msg name="maxlength" key="errors.maxlength"/>
+        <arg0 name="maxlength" key="info.addressline1"/>
+        <arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+        <var>
+                   <var-name>maxlength</var-name>
+                   <var-value>50</var-value>
+               </var>
+        </field>
+        <field property="addr2" depends="required,maxlength">
+        <msg name="required" key="errors.required"/>
+        <arg0 name="required" key="info.addressline2"/>
+         <msg name="maxlength" key="errors.maxlength"/>
+        <arg0 name="maxlength" key="info.addressline2"/>
+        <arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+        <var>
+                   <var-name>maxlength</var-name>
+                   <var-value>50</var-value>
+               </var>
+        </field>
+        </form>
+        
+        
+        
+        <form name="addNewAddressForm">
+        <field property="lastname" depends="required,maxlength">
+        <msg name="required" key="errors.required"/>
+        <arg0 name="required" key="info.lastname"/>
+        <msg name="maxlength" key="errors.maxlength"/>
+        <arg0 name="maxlength" key="info.lastname"/>
+        <arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+        <var>
+                   <var-name>maxlength</var-name>
+                   <var-value>15</var-value>
+               </var>
+        </field>
+        <field property="firstname" depends="required,maxlength">
+        <msg name="required" key="errors.required"/>
+        <arg0 name="required" key="info.firstname"/>
+         <msg name="maxlength" key="errors.maxlength"/>
+        <arg0 name="maxlength" key="info.firstname"/>
+        <arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+        <var>
+                   <var-name>maxlength</var-name>
+                   <var-value>15</var-value>
+               </var>
+        </field>
+        <field property="phonenumber" depends="required,maxlength">
+        <msg name="required" key="errors.required"/>
+        <arg0 name="required" key="info.phone"/>
+         <msg name="maxlength" key="errors.maxlength"/>
+        <arg0 name="maxlength" key="info.phone"/>
+        <arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+        <var>
+                   <var-name>maxlength</var-name>
+                   <var-value>15</var-value>
+               </var>
+        </field>
+        <field property="state" depends="required,maxlength">
+        <msg name="required" key="errors.required"/>
+        <arg0 name="required" key="info.state"/>
+        <msg name="maxlength" key="errors.maxlength"/>
+        <arg0 name="maxlength" key="info.state"/>
+        <arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+        <var>
+                   <var-name>maxlength</var-name>
+                   <var-value>10</var-value>
+               </var>
+        </field>
+        <field property="city" depends="required,maxlength">
+        <msg name="required" key="errors.required"/>
+        <arg0 name="required" key="info.city"/>
+         <msg name="maxlength" key="errors.maxlength"/>
+        <arg0 name="maxlength" key="info.city"/>
+        <arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+        <var>
+                   <var-name>maxlength</var-name>
+                   <var-value>50</var-value>
+               </var>
+        </field>
+        <field property="zipcode" depends="required,integer">
+        <msg name="required" key="errors.required"/>
+        <arg0 name="required" key="info.zipcode"/>
+        <msg name="integer" key="errors.integer"/>
+        <arg0 name="integer" key="info.zipcode"/>
+        </field>
+        <field property="company" depends="required,maxlength">
+        <msg name="required" key="errors.required"/>
+        <arg0 name="required" key="info.company"/>
+         <msg name="maxlength" key="errors.maxlength"/>
+        <arg0 name="maxlength" key="info.company"/>
+        <arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+        <var>
+                   <var-name>maxlength</var-name>
+                   <var-value>30</var-value>
+               </var>
+        </field>
+        <field property="addrline1" depends="required,maxlength">
+        <msg name="required" key="errors.required"/>
+        <arg0 name="required" key="info.addressline1"/>
+         <msg name="maxlength" key="errors.maxlength"/>
+        <arg0 name="maxlength" key="info.addressline1"/>
+        <arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+        <var>
+                   <var-name>maxlength</var-name>
+                   <var-value>50</var-value>
+               </var>
+        </field>
+        <field property="addrline2" depends="required,maxlength">
+        <msg name="required" key="errors.required"/>
+        <arg0 name="required" key="info.addressline2"/>
+         <msg name="maxlength" key="errors.maxlength"/>
+        <arg0 name="maxlength" key="info.addressline2"/>
+        <arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+        <var>
+                   <var-name>maxlength</var-name>
+                   <var-value>50</var-value>
+               </var>
+        </field>
+        </form>
+        
+        
+        
+        
+        <form name="updateUserForm">
+        <field property="password" depends="required,maxlength,minlength">
+        <msg name="required" key="errors.required"/>
+        <arg0 name="required" key="info.password"/>
+        <msg name="minlength" key="errors.minlength"/>
+        <arg0 name="minlength" key="info.password"/>
+        <arg1 name="minlength" key="${var:minlength}" resource="false"/>
+        <var>
+                   <var-name>minlength</var-name>
+                   <var-value>5</var-value>
+               </var>
+        <msg name="maxlength" key="errors.maxlength"/>
+        <arg0 name="maxlength" key="info.password"/>
+        <arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+        <var>
+                   <var-name>maxlength</var-name>
+                   <var-value>50</var-value>
+               </var>
+        </field>
+        <field property="passwordSalt" depends="required,maxlength">
+        <msg name="required" key="errors.required"/>
+        <arg0 name="required" key="info.passwordsalt"/>
+        <msg name="maxlength" key="errors.maxlength"/>
+        <arg0 name="maxlength" key="info.passwordsalt"/>
+        <arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+        <var>
+                   <var-name>maxlength</var-name>
+                   <var-value>4</var-value>
+               </var>
+        </field>
+        <field property="email" depends="required,email">
+        <msg name="required" key="errors.required"/>
+        <arg0 name="required" key="info.email"/>
+        <msg name="email" key="errors.email"></msg>
+        </field>
+        </form>
+        
+        
+        <form name="registerForm">
+        <field property="username" depends="required,maxlength">
+        <msg name="required" key="errors.required"/>
+        <arg0 name="required" key="info.username"/>
+        <msg name="maxlength" key="errors.maxlength"/>
+        <arg0 name="maxlength" key="info.username"/>
+        <arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+        <var>
+                   <var-name>maxlength</var-name>
+                   <var-value>20</var-value>
+               </var>
+        </field>
+        <field property="lastname" depends="required,maxlength">
+        <msg name="required" key="errors.required"/>
+        <arg0 name="required" key="info.lastname"/>
+         <msg name="maxlength" key="errors.maxlength"/>
+        <arg0 name="maxlength" key="info.lastname"/>
+        <arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+        <var>
+                   <var-name>maxlength</var-name>
+                   <var-value>15</var-value>
+               </var>
+        </field>
+        <field property="zipcode" depends="required,integer">
+        <msg name="required" key="errors.required"/>
+        <arg0 name="required" key="info.zipcode"/>
+        <msg name="integer" key="errors.integer"/>
+        <arg0 name="integer" key="info.zipcode"/>
+        </field>
+        <field property="firstname" depends="required,maxlength">
+        <msg name="required" key="errors.required"/>
+        <arg0 name="required" key="info.firstname"/>
+         <msg name="maxlength" key="errors.maxlength"/>
+        <arg0 name="maxlength" key="info.firstname"/>
+        <arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+        <var>
+                   <var-name>maxlength</var-name>
+                   <var-value>15</var-value>
+               </var>
+        </field>
+        <field property="password" depends="required,maxlength,minlength">
+        <msg name="required" key="errors.required"/>
+        <arg0 name="required" key="info.password"/>
+        <msg name="minlength" key="errors.minlength"/>
+        <arg0 name="minlength" key="info.password"/>
+        <arg1 name="minlength" key="${var:minlength}" resource="false"/>
+        <var>
+                   <var-name>minlength</var-name>
+                   <var-value>5</var-value>
+               </var>
+        <msg name="maxlength" key="errors.maxlength"/>
+        <arg0 name="maxlength" key="info.password"/>
+        <arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+        <var>
+                   <var-name>maxlength</var-name>
+                   <var-value>50</var-value>
+               </var>
+        </field>
+        <field property="passwordsalt" depends="required,maxlength">
+        <msg name="required" key="errors.required"/>
+        <arg0 name="required" key="info.passwordsalt"/>
+        <msg name="maxlength" key="errors.maxlength"/>
+        <arg0 name="maxlength" key="info.passwordsalt"/>
+        <arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+        <var>
+                   <var-name>maxlength</var-name>
+                   <var-value>4</var-value>
+               </var>
+        </field>
+        <field property="email" depends="required,email">
+        <msg name="required" key="errors.required"/>
+        <arg0 name="required" key="info.email"/>
+        <msg name="email" key="errors.email"></msg>
+        </field>
+        <field property="phone" depends="required,maxlength">
+        <msg name="required" key="errors.required"/>
+        <arg0 name="required" key="info.phone"/>
+         <msg name="maxlength" key="errors.maxlength"/>
+        <arg0 name="maxlength" key="info.phone"/>
+        <arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+        <var>
+                   <var-name>maxlength</var-name>
+                   <var-value>15</var-value>
+               </var>
+        </field>
+        <field property="state" depends="required,maxlength">
+        <msg name="required" key="errors.required"/>
+        <arg0 name="required" key="info.state"/>
+        <msg name="maxlength" key="errors.maxlength"/>
+        <arg0 name="maxlength" key="info.state"/>
+        <arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+        <var>
+                   <var-name>maxlength</var-name>
+                   <var-value>10</var-value>
+               </var>
+        </field>
+        <field property="city" depends="required,maxlength">
+        <msg name="required" key="errors.required"/>
+        <arg0 name="required" key="info.city"/>
+         <msg name="maxlength" key="errors.maxlength"/>
+        <arg0 name="maxlength" key="info.city"/>
+        <arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+        <var>
+                   <var-name>maxlength</var-name>
+                   <var-value>50</var-value>
+               </var>
+        </field>
+        
+        <field property="company" depends="required,maxlength">
+        <msg name="required" key="errors.required"/>
+        <arg0 name="required" key="info.company"/>
+         <msg name="maxlength" key="errors.maxlength"/>
+        <arg0 name="maxlength" key="info.company"/>
+        <arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+        <var>
+                   <var-name>maxlength</var-name>
+                   <var-value>30</var-value>
+               </var>
+        </field>
+        <field property="addressline1" depends="required,maxlength">
+        <msg name="required" key="errors.required"/>
+        <arg0 name="required" key="info.addressline1"/>
+         <msg name="maxlength" key="errors.maxlength"/>
+        <arg0 name="maxlength" key="info.addressline1"/>
+        <arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+        <var>
+                   <var-name>maxlength</var-name>
+                   <var-value>50</var-value>
+               </var>
+        </field>
+        <field property="addressline2" depends="required,maxlength">
+        <msg name="required" key="errors.required"/>
+        <arg0 name="required" key="info.addressline2"/>
+         <msg name="maxlength" key="errors.maxlength"/>
+        <arg0 name="maxlength" key="info.addressline2"/>
+        <arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+        <var>
+                   <var-name>maxlength</var-name>
+                   <var-value>50</var-value>
+               </var>
+        </field>
+        </form>
+        
+        
+        
+        <form name="insertBookForm">  
+        <field property="ISBN" depends="required,long">
+        <msg name="required" key="errors.required"/>
+        <arg0 name="required" key="info.ISBN"/>
+        <msg name="long" key="errors.long"/>
+        
+        </field>
+        <field property="bookTitle" depends="required,maxlength">
+        <msg name="required" key="errors.required"/>
+        <arg0 name="required" key="info.bookTitle"/>
+        <msg name="maxlength" key="errors.maxlength"/>
+        <arg0 name="maxlength" key="info.bookTtile"/>
+        <arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+        <var>
+                   <var-name>maxlength</var-name>
+                   <var-value>100</var-value>
+               </var>
+        </field>
+        <field property="author" depends="required,maxlength">
+        <msg name="required" key="errors.required"/>
+        <arg0 name="required" key="info.author"/>
+        <msg name="maxlength" key="errors.maxlength"/>
+        <arg0 name="maxlength" key="info.author"/>
+        <arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+        <var>
+                   <var-name>maxlength</var-name>
+                   <var-value>50</var-value>
+               </var>
+        </field>
+        <field property="publishTime" depends="required">
+        <msg name="required" key="errors.required"/>
+        <arg0 name="required" key="info.publishTime"/>
+        </field>
+        <field property="stockquantity" depends="required">
+        <msg name="required" key="errors.required"/>
+        <arg0 name="required" key="info.stockquantity"/>
+        </field>
+        <field property="unitprice" depends="required,double">
+        <msg name="required" key="errors.required"/>
+        <arg0 name="required" key="info.unitprice"/>
+        <msg name="double" key="errors.double"/>
+        </field>
+        <field property="image" depends="required">
+        <msg name="required" key="errors.required"/>
+        <arg0 name="required" key="info.image"/>
+        </field>
+        <field property="description" depends="required,maxlength">
+        <msg name="required" key="errors.required"/>
+        <arg0 name="required" key="info.description"/>
+        <msg name="maxlength" key="errors.maxlength"/>
+        <arg0 name="maxlength" key="info.description"/>
+        <arg1 name="maxlength" key="${var:maxlength}" resource="false"/>
+        <var>
+                   <var-name>maxlength</var-name>
+                   <var-value>1000</var-value>
+               </var>
+        </field>
+        
+        </form>
+        
+       <form name="queryOneBookForm">
+       <field property="booksku" depends="required,integer">
+       <msg name="required" key="errors.required"/>
+       <arg0 name="required" key="info.booksku"/>
+       <msg name="integer" key="errors.integer"/>
+       <arg0 name="integer" key="info.booksku"/>
+       </field>
+       </form>
+       <form name="updateBookForm">
+       <field property="stockquantity" depends="required,integer">
+       <msg name="required" key="errors.required"/>
+       <arg0 name="required" key="info.stockquantity"/>
+       <msg name="integer" key="errors.integer"/>
+       <arg0 name="integer" key="info.stockquantity"/>
+       </field>
+       <field property="unitprice" depends="required,double">
+       <msg name="required" key="errors.required"/>
+       <arg0 name="required" key="info.unitprice"/>
+       <msg name="double" key="errors.double"/>
+       </field>
+       </form>
+    </formset>
+</form-validation>

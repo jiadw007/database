@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+
+    <bean id="udao" class="dao.UserDao" />
+    <bean id="edao" class="dao.EmployeeDao" />
+    
+    <bean name="/userLogin" class="database.action.UserLoginAction">
+        <property name="udao">
+        <ref local="udao"/>
+        </property>
+    </bean>
+    <bean name="/employeeLogin" class="database.action.employeeLoginAction">
+        <property name="edao">
+        <ref local="edao"/>
+        </property>
+    </bean>
+    <bean name="/register" class="database.action.RegisterAction">
+        <property name="udao">
+        <ref local="udao" />
+        </property>
+    </bean>
+    
+    <bean name="/insertBook" class="database.action.InsertBookAction">
+        <property name="edao">
+        <ref local="edao" />
+        </property>
+    
+    </bean>
+    <bean name="/userRegister" class="database.action.UserRegisterAction">
+        <property name="udao">
+        <ref local="udao"/>
+        </property>
+    </bean>
+    
+    <bean name="/queryUser" class="database.action.QueryUserAction">
+        <property name="edao">
+        <ref local="edao"/>
+        </property>
+    </bean>
+    <bean name="/deleteUser" class="database.action.DeleteUserAction">
+        <property name="edao">
+        <ref local="edao" />
+        </property>
+    </bean>
+    <bean name="/queryBook" class="database.action.QueryBookAction">
+         <property name="edao">
+         <ref local="edao"/>
+         </property>
+    </bean>
+    <bean name="/queryOrder" class="database.action.QueryOrderAction">
+         <property name="edao">
+         <ref local="edao"/>
+         </property>
+    </bean>
+    <bean name="/updateBook" class="database.action.UpdateBookAction">
+         <property name="edao">
+         <ref local="edao"/>
+         </property>
+    </bean>
+    <bean name="/queryOneBook" class="database.action.QueryOneBookAction">
+         <property name="edao">
+         <ref local="edao"/>
+         </property>
+    </bean>
+    <bean name="/searchBook" class="database.action.SearchBookAction">
+         <property name="udao">
+         <ref local="udao"/>
+         </property>
+    </bean>
+    <bean name="/advancedSearch" class="database.action.AdvancedSearchAction">
+         <property name="udao">
+         <ref local="udao"/>
+         </property>
+    </bean>
+    <bean name="/advancedQuery" class="database.action.AdvancedQueryAction">
+    </bean>
+    <bean name="/bookInformation" class="database.action.BookInformationAction">
+         <property name="udao">
+         <ref local="udao"></ref>
+         </property>
+    </bean>
+    <bean name="/updateUser" class="database.action.UpdateUserAction">
+         <property name="udao">
+         <ref local="udao"/>
+         </property>
+    </bean>
+    <bean name="/updateAddress" class="database.action.UpdateAddressAction">
+         <property name="udao">
+         <ref local="udao"/>
+         </property>
+    </bean>
+    <bean name="/manageAddress" class="database.action.ManageAddressAction">
+         <property name="udao">
+         <ref local="udao"/>
+         </property>
+    </bean>
+    <bean name="/addNewAddress" class="database.action.AddNewAddressAction">
+         <property name="udao">
+         <ref local="udao"/>
+         </property>
+    </bean>
+    <bean name="/checkAddress" class="database.action.CheckAddressAction">
+         <property name="udao">
+         <ref local="udao"/>
+         </property>
+    </bean>
+    <bean name="/deleteAddress" class="database.action.DeleteAddressAction">
+         <property name="udao">
+         <ref local="udao"/>
+         </property>
+    </bean>
+    <bean name="/addNewCredit" class="database.action.AddNewCreditAction">
+         <property name="udao">
+         <ref local="udao"/>
+         </property>
+    </bean>
+    <bean name="/manageCredit" class="database.action.ManageCreditAction">
+         <property name="udao">
+         <ref local="udao"/>
+         </property>
+    </bean>
+    <bean name="/deleteCredit" class="database.action.DeleteCreditAction">
+         <property name="udao">
+         <ref local="udao"/>
+         </property>
+    </bean>
+    <bean name="/checkCredit" class="database.action.CheckCreditAction">
+         <property name="udao">
+         <ref local="udao"/>
+         </property>
+    </bean>
+    <bean name="/updateCredit" class="database.action.UpdateCreditAction">
+         <property name="udao">
+         <ref local="udao"/>
+         </property>
+    </bean>
+    <bean name="/checkOrder" class="database.action.CheckOrderAction">
+         <property name="udao">
+         <ref local="udao"/>
+         </property>
+    </bean>
+    <bean name="/checkDetails" class="database.action.CheckDetailsAction">
+         <property name="udao">
+         <ref local="udao"/>
+         </property>
+    </bean>
+    <bean name="/addToShoppingCart" class="database.action.AddToShoppingCartAction">
+           
+    </bean>
+    <bean name="/chooseShippingAddress" class="database.action.ChooseShippingAddressAction">
+        <property name="udao">
+        <ref local="udao"/>
+        </property>
+    </bean>
+    <bean name="/choosePayment" class="database.action.ChoosePaymentAction">
+   <property name="udao">
+        <ref local="udao"/>
+        </property>
+      
+    </bean>
+    <bean name="/checkOut" class="database.action.CheckOutAction">
+        <property name="udao">
+        <ref local="udao"/>
+        </property>
+    </bean>
+</beans>

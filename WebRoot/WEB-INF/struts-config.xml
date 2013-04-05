@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+  <data-sources />
+  <form-beans >
+    <form-bean name="userLoginForm" type="database.form.UserLoginForm" />
+    <form-bean name="employeeLoginForm" type="database.form.employeeLoginForm" />
+    <form-bean name="registerForm" type="database.form.RegisterForm" />
+    <form-bean name="insertBookForm" type="database.form.InsertBookForm" />
+    <form-bean name="userRegisterForm" type="database.form.UserRegisterForm" />
+    <form-bean name="updateBookForm" type="database.form.UpdateBookForm" />
+    <form-bean name="queryOneBookForm" type="database.form.QueryOneBookForm" />
+    <form-bean name="searchBookForm" type="database.form.SearchBookForm" />
+    <form-bean name="advancedSearchForm" type="database.form.AdvancedSearchForm" />
+    <form-bean name="updateUserForm" type="database.form.UpdateUserForm" />
+    <form-bean name="updateAddressForm" type="database.form.UpdateAddressForm" />
+    <form-bean name="addNewAddressForm" type="database.form.AddNewAddressForm" />
+    <form-bean name="checkAddressForm" type="database.form.CheckAddressForm" />
+    <form-bean name="addNewCreditForm" type="database.form.AddNewCreditForm" />
+    <form-bean name="checkCreditForm" type="database.form.CheckCreditForm" />
+    <form-bean name="updateCreditForm" type="database.form.UpdateCreditForm" />
+    <form-bean name="addToShoppingCartForm" type="database.form.AddToShoppingCartForm" />
+    <form-bean name="choosePaymentForm" type="database.form.ChoosePaymentForm" />
+    <form-bean name="checkOutForm" type="database.form.CheckOutForm" />
+  </form-beans>
+
+  <global-exceptions />
+  <global-forwards />
+  <action-mappings >
+    <action
+      attribute="userLoginForm"
+      input="/userLogin.jsp"
+      name="userLoginForm"
+      path="/userLogin"
+      scope="request"
+      type="org.springframework.web.struts.DelegatingActionProxy">
+      <set-property property="cancellable" value="true" />
+    </action>
+    <action
+      attribute="employeeLoginForm"
+      input="/employeeLogin.jsp"
+      name="employeeLoginForm"
+      path="/employeeLogin"
+      scope="request"
+      type="org.springframework.web.struts.DelegatingActionProxy">
+      <set-property property="cancellable" value="true" />
+    </action>
+    <action
+      attribute="registerForm"
+      name="registerForm"
+      input="/register.jsp"
+      path="/register"
+      scope="request"
+      validate="true"
+      type="org.springframework.web.struts.DelegatingActionProxy">
+      <set-property property="cancellable" value="true" />
+    </action>
+    <action
+      attribute="insertBookForm"
+      input="/insertBook.jsp"
+      name="insertBookForm"
+      path="/insertBook"
+      scope="request"
+      validate="true"
+      type="org.springframework.web.struts.DelegatingActionProxy">
+      <set-property property="cancellable" value="true" />
+    </action>
+    <action
+      attribute="userRegisterForm"
+      input="/userRegister.jsp"
+      name="userRegisterForm"
+      path="/userRegister"
+      scope="request"
+      validate="true"
+      type="org.springframework.web.struts.DelegatingActionProxy">
+      <set-property property="cancellable" value="true" />
+    </action>
+    <action path="/queryUser" type="org.springframework.web.struts.DelegatingActionProxy">
+      <set-property property="cancellable" value="true" />
+    </action>
+    <action path="/deleteUser" type="org.springframework.web.struts.DelegatingActionProxy">
+      <set-property property="cancellable" value="true" />
+    </action>
+    <action path="/queryBook" type="org.springframework.web.struts.DelegatingActionProxy">
+      <set-property property="cancellable" value="true" />
+    </action>
+    <action path="/queryOrder" type="org.springframework.web.struts.DelegatingActionProxy">
+      <set-property property="cancellable" value="true" />
+    </action>
+    <action
+      attribute="updateBookForm"
+      input="/queryOneBook.jsp"
+      name="updateBookForm"
+      path="/updateBook"
+      scope="request"
+      validate="true"
+      type="org.springframework.web.struts.DelegatingActionProxy">
+      <set-property property="cancellable" value="true" />
+    </action>
+    <action
+      attribute="queryOneBookForm"
+      input="/queryOneBook.jsp"
+      name="queryOneBookForm"
+      path="/queryOneBook"
+      scope="request"
+      validate="true"
+      type="org.springframework.web.struts.DelegatingActionProxy">
+      <set-property property="cancellable" value="true" />
+    </action>
+    <action
+      attribute="searchBookForm"
+      input="/searchBook.jsp"
+      name="searchBookForm"
+      path="/searchBook"
+      scope="request"
+      type="org.springframework.web.struts.DelegatingActionProxy">
+      <set-property property="cancellable" value="true" />
+    </action>
+    <action
+      attribute="advancedSearchForm"
+      input="/advancedSearch.jsp"
+      name="advancedSearchForm"
+      path="/advancedSearch"
+      scope="request"
+      type="org.springframework.web.struts.DelegatingActionProxy">
+      <set-property property="cancellable" value="true" />
+    </action>
+    <action path="/advancedQuery" type="org.springframework.web.struts.DelegatingActionProxy">
+      <set-property property="cancellable" value="true" />
+    </action>
+    <action path="/bookInformation" type="org.springframework.web.struts.DelegatingActionProxy">
+      <set-property property="cancellable" value="true" />
+    </action>
+    <action 
+      path="/updateUser" 
+      attribute="updateUserForm"
+      input="/updateUser.jsp"
+      name="updateUserForm"
+      scope="request"
+      validate="true"
+      type="org.springframework.web.struts.DelegatingActionProxy">
+      <set-property property="cancellable" value="true" />
+    </action>
+    <action
+      attribute="updateAddressForm"
+      input="/updateAddress.jsp"
+      name="updateAddressForm"
+      path="/updateAddress"
+      scope="request"
+      validate="true"
+      type="org.springframework.web.struts.DelegatingActionProxy">
+      <set-property property="cancellable" value="true" />
+    </action>
+    <action path="/manageAddress" type="org.springframework.web.struts.DelegatingActionProxy">
+      <set-property property="cancellable" value="true" />
+    </action>
+    <action
+      attribute="addNewAddressForm"
+      input="/addNewAddress.jsp"
+      name="addNewAddressForm"
+      path="/addNewAddress"
+      scope="request"
+      validate="true"
+      type="org.springframework.web.struts.DelegatingActionProxy">
+      <set-property property="cancellable" value="true" />
+    </action>
+    <action 
+      path="/checkAddress" 
+      input="/manageAddress.jsp"
+      name="checkAddressForm"
+      attribute="checkAddressForm"
+      scope="request"
+      type="org.springframework.web.struts.DelegatingActionProxy">
+      <set-property property="cancellable" value="true" />
+    </action>
+    <action path="/deleteAddress" type="org.springframework.web.struts.DelegatingActionProxy">
+      <set-property property="cancellable" value="true" />
+    </action>
+    <action
+      attribute="addNewCreditForm"
+      input="/addNewCredit.jsp"
+      name="addNewCreditForm"
+      path="/addNewCredit"
+      scope="request"
+      validate="true"
+      type="org.springframework.web.struts.DelegatingActionProxy">
+      <set-property property="cancellable" value="true" />
+    </action>
+    <action path="/manageCredit" type="org.springframework.web.struts.DelegatingActionProxy">
+      <set-property property="cancellable" value="true" />
+    </action>
+    <action path="/deleteCredit" type="org.springframework.web.struts.DelegatingActionProxy">
+      <set-property property="cancellable" value="true" />
+    </action>
+    <action
+      attribute="checkCreditForm"
+      input="/manageCredit.jsp"
+      name="checkCreditForm"
+      path="/checkCredit"
+      scope="request"
+      type="org.springframework.web.struts.DelegatingActionProxy">
+      <set-property property="cancellable" value="true" />
+    </action>
+    <action
+      attribute="updateCreditForm"
+      input="/updateCredit.jsp"
+      name="updateCreditForm"
+      path="/updateCredit"
+      scope="request"
+      validate="true"
+      type="org.springframework.web.struts.DelegatingActionProxy">
+      <set-property property="cancellable" value="true" />
+    </action>
+    <action path="/checkOrder" type="org.springframework.web.struts.DelegatingActionProxy">
+      <set-property property="cancellable" value="true" />
+    </action>
+    <action path="/checkDetails" type="org.springframework.web.struts.DelegatingActionProxy">
+      <set-property property="cancellable" value="true" />
+    </action>
+    <action
+      attribute="addToShoppingCartForm"
+      input="/addToShoppingCart.jsp"
+      name="addToShoppingCartForm"
+      path="/addToShoppingCart"
+      scope="request"
+      type="org.springframework.web.struts.DelegatingActionProxy">
+      <set-property property="cancellable" value="true" />
+    </action>
+    <action 
+      path="/checkOut" 
+      attribute="checkOutForm"
+      name="checkOutForm"
+      input="/choosePayment.jsp"
+      scope="request"
+      type="org.springframework.web.struts.DelegatingActionProxy">
+      <set-property property="cancellable" value="true" />
+    </action>
+    <action path="/chooseShippingAddress" type="org.springframework.web.struts.DelegatingActionProxy">
+      <set-property property="cancellable" value="true" />
+    </action>
+    <action
+      attribute="choosePaymentForm"
+      input="/chooseShippingAddress.jsp"
+      name="choosePaymentForm"
+      path="/choosePayment"
+      scope="request"
+      type="org.springframework.web.struts.DelegatingActionProxy">
+      <set-property property="cancellable" value="true" />
+    </action>
+    
+    
+    
+
+  </action-mappings>
+
+  <message-resources parameter="resources.ApplicationResources" />
+  <plug-in className="org.springframework.web.struts.ContextLoaderPlugIn">
+  <set-property property="contextConfigLocation" value="/WEB-INF/applicationContext.xml" />
+  </plug-in>
+  <plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+  <set-property value="/WEB-INF/validator-rules.xml,/WEB-INF/validation.xml" property="pathnames"/>
+  </plug-in> 
+</struts-config>
+

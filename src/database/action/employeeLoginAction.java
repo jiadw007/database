@@ -57,7 +57,7 @@ public class employeeLoginAction extends Action {
 		Employee employee=edao.getUserByUsername(loginname);
 		ActionMessages errors=new ActionMessages();
 		if(employee==null||!employee.getPassword().equals(password)){
-			ActionMessage error=new ActionMessage("error.employee");
+			ActionMessage error=new ActionMessage("errors.employee");
 			errors.add("employeelogin",error);
 			this.saveErrors(request,errors);
 			return mapping.getInputForward();

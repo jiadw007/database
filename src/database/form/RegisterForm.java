@@ -75,6 +75,15 @@ public class RegisterForm extends ValidatorForm {
 	public String getAddressline2() {
 		return addressline2;
 	}
+    
+	
+	public int getZipcode() {
+		return zipcode;
+	}
+
+	public void setZipcode(int zipcode) {
+		this.zipcode = zipcode;
+	}
 
 	/** 
 	 * Set the addressline2.
@@ -230,13 +239,9 @@ public class RegisterForm extends ValidatorForm {
 		this.city = city;
 	}
 
-	public int getZipcode() {
-		return zipcode;
-	}
+	
 
-	public void setZipcode(int zipcode) {
-		this.zipcode = zipcode;
-	}
+	
 
 	public String getCompany() {
 		return company;

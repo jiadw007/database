@@ -58,13 +58,13 @@ public class UserLoginAction extends Action {
 		User user=udao.getUserByUsername(username);
 		ActionMessages errors=new ActionMessages();
 		if(user==null||!user.getPassword().equals(password)){
-			ActionMessage error=new ActionMessage("error.login");
+			ActionMessage error=new ActionMessage("errors.login");
 			errors.add("login",error);
 			this.saveErrors(request,errors);
 			return mapping.getInputForward();
 		}
 		System.out.println(user.getCreateTime());
 		request.getSession().setAttribute("user",user);
-		return new ActionForward("/index.jsp");
+		return new ActionForward("/main.jsp");
 	}
 }

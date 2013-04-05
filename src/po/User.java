@@ -35,6 +35,13 @@ public class User {
 		this.email=email;
 	}
 	
+	public User(String username2, String password2, String ps, String email2) {
+		// TODO Auto-generated constructor stub
+		this.username=username2;
+		this.password=password2;
+		this.passwordSalt=ps;
+		this.email=email2;
+	}
 	public int getID() {
 		return ID;
 	}
