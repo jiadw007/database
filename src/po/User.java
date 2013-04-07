@@ -12,7 +12,7 @@ public class User {
 	private String passwordSalt;
 	private int defaultShippingAddress;
 	private int defaultbillingAddress;
-	
+	private int sum;
 	public User( ){
 		
 	}
@@ -41,6 +41,12 @@ public class User {
 		this.password=password2;
 		this.passwordSalt=ps;
 		this.email=email2;
+	}
+	public User(int id2, String username2, int sum2) {
+		// TODO Auto-generated constructor stub
+		this.ID=id2;
+		this.username=username2;
+		this.sum=sum2;
 	}
 	public int getID() {
 		return ID;
@@ -101,6 +107,12 @@ public class User {
 	}
 	public void setPasswordSalt(String passwordSalt) {
 		this.passwordSalt = passwordSalt;
+	}
+	public int getSum() {
+		return sum;
+	}
+	public void setSum(int sum) {
+		this.sum = sum;
 	}
 
 }

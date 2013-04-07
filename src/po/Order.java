@@ -17,8 +17,8 @@ public class Order {
 	private int employeeId;
 	
 	public Order(int id2, String status2, Timestamp date, long tid,
-			float amount2, int ship, int customer, int employee, int qu,
-			int sku2) {
+			int ship, int customer, int employee, int qu,
+			int sku2,float amount2) {
 		id=id2;
 		status=status2;
 		this.placeOnDate=date;
@@ -40,6 +40,10 @@ public class Order {
 	    this.status=status2;
 	    this.placeOnDate=time;
 	    this.amount=amount;
+	}
+
+	public Order() {
+		// TODO Auto-generated constructor stub
 	}
 
 	public int getId() {

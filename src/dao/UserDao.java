@@ -449,6 +449,7 @@ public class UserDao implements IUserDao{
 		String url="jdbc:oracle:thin:@oracle.cise.ufl.edu:1521:orcl";
 		String sql="select firstname,lastname,company,state,phonenumber,zipcode,city,addr_line1,addr_line2 from Address where ID="+id;
 		Address address=new Address();
+		System.out.println(sql);
 		try{
 			Class.forName("oracle.jdbc.driver.OracleDriver");			
 		}catch(java.lang.ClassNotFoundException e){
@@ -802,13 +803,13 @@ public class UserDao implements IUserDao{
 				String status=rs.getString(2);
 				Timestamp date=rs.getTimestamp(3);
 				long tid=rs.getInt(4);
-				float amount=rs.getFloat(10);
 				int ship=rs.getInt(5);
 				int customer=rs.getInt(6);
 				int employee=rs.getInt(7);
 				int qu=rs.getInt(8);
 				int sku=rs.getInt(9);
-				Order order=new Order(id,status,date,tid,amount,ship,customer,employee,qu,sku);
+				float amount=rs.getFloat(10);
+				Order order=new Order(id,status,date,tid,ship,customer,employee,qu,sku,amount);
 			    orders.add(order);
 			}
 			stmt.close();
@@ -901,9 +902,9 @@ public class UserDao implements IUserDao{
 
 	public boolean addNewOrder(Order order) {
 		// TODO Auto-generated method stub
-		String sql2="insert into orders(id,status,placeondate,shipping_addr,customer,quantity,sku,amount) values(?,?,?,?,?,?,?,?)";
+		String sql2="insert into orders(id,status,placeondate,shipping_addr,customer,quantity,sku,amount,transactionid) values(?,?,?,?,?,?,?,?,?)";
 		String url="jdbc:oracle:thin:@oracle.cise.ufl.edu:1521:orcl";
-		String sql1="select max(ID) from orders";
+		String sql1="select max(ID),max(transactionid) from orders";
 		try{
 			Class.forName("oracle.jdbc.driver.OracleDriver");
 		}catch(java.lang.ClassNotFoundException e){
@@ -915,10 +916,13 @@ public class UserDao implements IUserDao{
 			ResultSet rs=stmt.executeQuery(sql1);
 			System.out.println(sql1);
 			int ID = 0;
+			int tid=0;
 			while(rs.next()){
 				ID=rs.getInt(1)+1;
+				tid=rs.getInt(2)+1;
 			}
 			System.out.println(ID);
+			System.out.println(tid);
 			PreparedStatement ps=con.prepareStatement(sql2);
 			System.out.println(sql2);
 			ps.setInt(1, ID);
@@ -929,6 +933,7 @@ public class UserDao implements IUserDao{
 			ps.setInt(6, order.getQuantity());
 			ps.setInt(7, order.getSku());
 			ps.setFloat(8, order.getAmount());
+			ps.setInt(9, tid);
 			//System.out.println(sql2);
 			ps.executeUpdate();
 			stmt.close();

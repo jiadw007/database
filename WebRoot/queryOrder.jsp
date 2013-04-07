@@ -27,6 +27,7 @@
      <td align="center" valign="middle" width="100">EMPLOYEE</td>
      </tr>
      <logic:iterate id="order" name="pc" property="smallList">
+     <tr>
      <td align="center" valign="middle" width="100"><bean:write name="order" property="id"/> </td>
      <td align="center" valign="middle" width="100"><bean:write name="order" property="sku"/> </td>
      <td align="center" valign="middle" width="100"><bean:write name="order" property="status"/> </td>
@@ -37,7 +38,7 @@
      <td align="center" valign="middle" width="100"><bean:write name="order" property="shippingAddress"/> </td>
      <td align="center" valign="middle" width="100"><bean:write name="order" property="customerId"/> </td>
      <td align="center" valign="middle" width="100"><bean:write name="order" property="employeeId"/> </td>
-     
+     </tr>
      </logic:iterate>
      </table>
      <div align="center">

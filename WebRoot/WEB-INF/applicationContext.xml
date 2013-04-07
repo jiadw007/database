@@ -165,4 +165,42 @@
         <ref local="udao"/>
         </property>
     </bean>
+    <bean name="/selectTopBook" class="database.action.SelectTopBookAction">
+        <property name="edao">
+        <ref local="edao"/>
+        </property>
+    </bean>
+    <bean name="/selectTopBuyer" class="database.action.SelectTopBuyerAction">
+        <property name="edao">
+        <ref local="edao"/>
+        </property>
+    </bean>
+    <bean name="/selectTopSale" class="database.action.SelectTopSaleAction">
+        <property name="edao">
+        <ref local="edao"/>
+        </property>
+    </bean>
+    <bean name="/selectTopSupplier" class="database.action.SelectTopSupplierAction">
+        <property name="edao">
+        <ref local="edao"/>
+        </property>
+    </bean>
+    <bean name="/queryOneOrder" class="database.action.QueryOneOrderAction">
+        <property name="edao">
+        <ref local="edao"/>
+        </property>
+        <property name="udao">
+        <ref local="udao"/>
+        </property>
+    </bean>
+    <bean name="/updateOrder" class="database.action.UpdateOrderAction">
+        <property name="edao">
+        <ref local="edao"/>
+        </property>
+    </bean>
+    <bean name="/advanceSelect" class="database.action.AdvanceSelectAction">
+        <property name="edao">
+        <ref local="edao"/>
+        </property>
+    </bean>
 </beans>

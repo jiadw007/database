@@ -23,6 +23,9 @@
     <form-bean name="addToShoppingCartForm" type="database.form.AddToShoppingCartForm" />
     <form-bean name="choosePaymentForm" type="database.form.ChoosePaymentForm" />
     <form-bean name="checkOutForm" type="database.form.CheckOutForm" />
+    <form-bean name="queryOneOrderForm" type="database.form.QueryOneOrderForm" />
+    <form-bean name="updateOrderForm" type="database.form.UpdateOrderForm" />
+    <form-bean name="advanceSelectForm" type="database.form.AdvanceSelectForm" />
   </form-beans>
 
   <global-exceptions />
@@ -245,6 +248,46 @@
       name="choosePaymentForm"
       path="/choosePayment"
       scope="request"
+      type="org.springframework.web.struts.DelegatingActionProxy">
+      <set-property property="cancellable" value="true" />
+    </action>
+    <action path="/selectTopBook" type="org.springframework.web.struts.DelegatingActionProxy">
+      <set-property property="cancellable" value="true" />
+    </action>
+    <action path="/selectTopBuyer" type="org.springframework.web.struts.DelegatingActionProxy">
+      <set-property property="cancellable" value="true" />
+    </action>
+    <action path="/selectTopSale" type="org.springframework.web.struts.DelegatingActionProxy">
+      <set-property property="cancellable" value="true" />
+    </action>
+    <action path="/selectTopSupplier" type="org.springframework.web.struts.DelegatingActionProxy">
+      <set-property property="cancellable" value="true" />
+    </action>
+    <action
+      attribute="queryOneOrderForm"
+      input="/queryOneOrder.jsp"
+      name="queryOneOrderForm"
+      path="/queryOneOrder"
+      scope="request"
+      type="org.springframework.web.struts.DelegatingActionProxy">
+      <set-property property="cancellable" value="true" />
+    </action>
+    <action
+      attribute="updateOrderForm"
+      input="/queryOneOrder.jsp"
+      name="updateOrderForm"
+      path="/updateOrder"
+      scope="request"
+      type="org.springframework.web.struts.DelegatingActionProxy">
+      <set-property property="cancellable" value="true" />
+    </action>
+    <action
+      attribute="advanceSelectForm"
+      input="/advanceSelect.jsp"
+      name="advanceSelectForm"
+      path="/advanceSelect"
+      scope="request"
+      parameter="method"
       type="org.springframework.web.struts.DelegatingActionProxy">
       <set-property property="cancellable" value="true" />
     </action>

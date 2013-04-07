@@ -14,12 +14,15 @@ public class Book {
 	private String author;
 	private String publishtime;
 	private Date createon;
-	public Book(int booksku, long isbn, int stockquantity, Double unitprice) {
+	private int sum;
+	private float amount;
+	public Book(int booksku, long isbn, int stockquantity, Double unitprice,String booktitle) {
 		super();
 		this.booksku = booksku;
 		this.isbn = isbn;
 		this.stockquantity = stockquantity;
 		this.unitprice = unitprice;
+		this.booktitle=booktitle;
 	}
 	private String file;
 	private String description;
@@ -78,6 +81,20 @@ public class Book {
 	}
 	public Book() {
 		// TODO Auto-generated constructor stub
+	}
+	public Book(long isbn2, String title, int sum2) {
+		
+		// TODO Auto-generated constructor stub
+		this.isbn=isbn2;
+		this.booktitle=title;
+		this.sum=sum2;
+	}
+	public Book(long isbn2, String title, float amount2) {
+		
+		// TODO Auto-generated constructor stub
+		this.isbn=isbn2;
+		this.booktitle=title;
+		this.amount=amount2;
 	}
 	public int getBooksku() {
 		return booksku;
@@ -138,6 +155,18 @@ public class Book {
 	}
 	public void setDescription(String description) {
 		this.description = description;
+	}
+	public int getSum() {
+		return sum;
+	}
+	public void setSum(int sum) {
+		this.sum = sum;
+	}
+	public float getAmount() {
+		return amount;
+	}
+	public void setAmount(float amount) {
+		this.amount = amount;
 	}
 	
 	

@@ -32,6 +32,12 @@
   <StrutsActivity path="/checkOut.do" location="950,2050" dimension="229,104" />
   <StrutsActivity path="/chooseShippingAddress.do" location="1850,850" dimension="316,104" />
   <StrutsActivity path="/choosePayment.do" location="1850,1250" dimension="266,104" />
+  <StrutsActivity path="/selectTopBook.do" location="1850,1850" dimension="261,104" />
+  <StrutsActivity path="/selectTopBuyer.do" location="1250,2050" dimension="263,104" />
+  <StrutsActivity path="/selectTopSale.do" location="1850,2050" dimension="254,104" />
+  <StrutsActivity path="/selectTopSupplier.do" location="50,2250" dimension="278,104" />
+  <StrutsActivity path="/queryOneOrder.do" location="650,2250" dimension="267,104" />
+  <StrutsActivity path="/updateOrder.do" location="1550,2250" dimension="251,104" />
   <StrutsActivity path="/userLogin.jsp" location="650,50" dimension="114,53" />
   <StrutsActivity path="/employeeLogin.jsp" location="350,250" dimension="146,53" />
   <StrutsActivity path="/register.jsp" location="650,250" dimension="102,53" />
@@ -48,10 +54,14 @@
   <StrutsActivity path="/manageCredit.jsp" location="50,1850" dimension="139,53" />
   <StrutsActivity path="/updateCredit.jsp" location="950,1850" dimension="133,53" />
   <StrutsActivity path="/addToShoppingCart.jsp" location="650,2050" dimension="175,53" />
+  <StrutsActivity path="/choosePayment.jsp" location="1850,1650" dimension="148,53" />
   <StrutsActivity path="/chooseShippingAddress.jsp" location="1850,1450" dimension="198,53" />
+  <StrutsActivity path="/queryOneOrder.jsp" location="1250,2250" dimension="149,53" />
+  <StrutsActivity path="/updateOrder.jsp" location="50,2450" dimension="133,53" />
   <StrutsActivity path="/updateBook.jsp" location="350,850" dimension="129,53" />
   <StrutsActivity path="/insertBook" location="50,450" dimension="100,53" />
-  <StrutsActivity path="/choosePayment.jsp" />
+  <StrutsActivity path="/advanceSelect.do" location="350,2450" dimension="256,104" />
+  <StrutsActivity path="/advanceSelect.jsp" location="950,2450" dimension="139,53" />
   <StrutsTransition id="/chooseShippingAddress.jsp,null,/choosePayment.do,2" routingType="0">
     <AutomaticBendpoints>
       <AbsolutePoint location="1983,1450" />
@@ -82,6 +92,12 @@
     <AutomaticBendpoints>
       <AbsolutePoint location="122,1076" />
       <AbsolutePoint location="173,902" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/queryOneOrder.jsp,null,/updateOrder.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1324,2276" />
+      <AbsolutePoint location="1675,2302" />
     </AutomaticBendpoints>
   </StrutsTransition>
   <StrutsTransition id="/choosePayment.jsp,null,/checkOut.do,2" routingType="0">
@@ -145,6 +161,12 @@
       <AbsolutePoint location="271,318" />
     </AutomaticBendpoints>
   </StrutsTransition>
+  <StrutsTransition id="/queryOneOrder.jsp,null,/queryOneOrder.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1250,2276" />
+      <AbsolutePoint location="917,2276" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
   <StrutsTransition id="/addNewCredit.jsp,null,/addNewCredit.do,2" routingType="0">
     <AutomaticBendpoints>
       <AbsolutePoint location="1620,850" />
@@ -162,6 +184,12 @@
     <AutomaticBendpoints>
       <AbsolutePoint location="950,1876" />
       <AbsolutePoint location="601,1876" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/advanceSelect.jsp,null,/advanceSelect.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="950,2476" />
+      <AbsolutePoint location="606,2476" />
     </AutomaticBendpoints>
   </StrutsTransition>
   <StrutsTransition id="/updateAddress.jsp,null,/updateAddress.do,2" routingType="0">
