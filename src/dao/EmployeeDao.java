@@ -15,6 +15,7 @@ import po.Book;
 import po.Employee;
 import po.Order;
 import po.User;
+import po.timeSeries;
 
 public class EmployeeDao implements IEmployeeDAO {
 
@@ -639,6 +640,39 @@ public class EmployeeDao implements IEmployeeDAO {
 			stmt.close();
 			con.close();
 			return users;
+		}catch(SQLException ex){
+			System.out.println(ex.toString());
+			System.out.println(ex.getMessage());
+		}
+		return null;
+		
+	}
+
+	public ArrayList timeseries() {
+		// TODO Auto-generated method stub
+		String url="jdbc:oracle:thin:@oracle.cise.ufl.edu:1521:orcl";
+		String sql="select year,month,sum(quantity) sum from stats group by year,month order by year asc,month asc";
+		System.out.println(sql);
+		ArrayList time=new ArrayList();
+		try{
+			Class.forName("oracle.jdbc.driver.OracleDriver");			
+		}catch(java.lang.ClassNotFoundException e){
+			System.out.println(e.getMessage());
+		}
+		try{
+			Connection con=DriverManager.getConnection(url,"dawei","jolly900513");
+			Statement stmt=con.createStatement();
+			ResultSet rs=stmt.executeQuery(sql);
+			while(rs.next()){
+				int year=Integer.parseInt(rs.getString(1));
+				int month=Integer.parseInt(rs.getString(2));
+				int sum=rs.getInt(3);
+				timeSeries t=new timeSeries(year,month,sum);
+				time.add(t);
+			}
+			stmt.close();
+			con.close();
+			return time;
 		}catch(SQLException ex){
 			System.out.println(ex.toString());
 			System.out.println(ex.getMessage());

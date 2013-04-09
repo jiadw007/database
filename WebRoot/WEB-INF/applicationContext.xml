@@ -203,4 +203,9 @@
         <ref local="edao"/>
         </property>
     </bean>
+    <bean name="/timeSeries" class="database.action.TimeSeriesAction">
+        <property name="edao">
+        <ref local="edao"/>
+        </property>
+    </bean>
 </beans>
