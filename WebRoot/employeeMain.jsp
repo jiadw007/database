@@ -16,7 +16,8 @@
   <html:link action="selectTopBuyer.do">Top 10 Customers</html:link><br />
   <html:link action="selectTopSale.do">Toe 10 Sales</html:link><br />
   <html:link action="selectTopSupplier.do">Top 10 Suppliers</html:link> <br />
-  <html:link page="/advanceSelect.jsp">Advance Top List</html:link>
+  <html:link page="/advanceSelect.jsp">Advance Top List</html:link><br />
+  <html:link action="timeSeries.do">Time Series</html:link>
   <br />
   Order<br />
   <html:link action="queryOrder.do">Check All Orders</html:link><br /> 
