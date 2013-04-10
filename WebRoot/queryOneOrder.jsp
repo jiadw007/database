@@ -6,9 +6,13 @@
 <html> 
 	<head>
 		<title>JSP for QueryOneBookForm form</title>
-		<script src="js/jquery-1.9.1.js" language="JavaScript"></script>
+		<jsp:include page="/script.jsp"/>
 	</head>
 	<body>
+	   <div id="northpanel">
+		<jsp:include page="/employeeMain.jsp" flush="true"></jsp:include>
+		</div>
+		<div id="centerpanel">
 		<html:form action="/queryOneOrder">
 			Order ID: <html:text property="id"/><html:errors property="id"/><br/>
 			<html:submit/><html:cancel/>
@@ -104,7 +108,7 @@
 		The update operation succeed
 		</logic:equal>
 		</logic:present>
-		
+		</div>
 	</body>
 </html>
 

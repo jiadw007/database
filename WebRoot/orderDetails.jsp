@@ -9,11 +9,14 @@
 <html>
   <head>
     <title>manageAddress</title>
-    <script src="js/jquery-1.9.1.js" language="JavaScript"></script>
+    <jsp:include page="/script.jsp" />
   </head>
   
   <body>
-
+<div id="northpanel">
+		<jsp:include page="/main.jsp" flush="true"></jsp:include>
+		</div>
+		<div id="centerpanel">
 <table>
 <tr><td>BOOK INFORMATION</td></tr>
 <tr>
@@ -69,5 +72,6 @@
   <td><bean:write name="ship" property="addressline2"/></td>
   </tr>
   </table>
+  </div>
   </body>
   </html>

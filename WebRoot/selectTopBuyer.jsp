@@ -7,9 +7,14 @@
   <head>
   
     <title>select Top Book</title>
+	<jsp:include page="/script.jsp" />
   </head>
   
   <body>
+  <div id="northpanel">
+		<jsp:include page="/employeeMain.jsp" flush="true"></jsp:include>
+		</div>
+		<div id="centerpanel">
     <table>
     <tr>
     <td>NO.</td>
@@ -27,5 +32,6 @@
     </tr>
     </logic:iterate>
     </table>
+	</div>
   </body>
 </html>

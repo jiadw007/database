@@ -7,10 +7,14 @@
   <head>
     
     <title>choose Payment</title>
-
+<jsp:include page="/script.jsp" />
   </head>
   
   <body>
+    <div id="northpanel">
+		<jsp:include page="/main.jsp" flush="true"></jsp:include>
+		</div>
+		<div id="centerpanel">
     <logic:equal name="choose" value="1">
     <logic:iterate id="credit" name="creditlist">
     <%Credit c=(Credit)credit; %>
@@ -29,5 +33,6 @@
    <logic:equal name="failed" value="1">
    Wrong CVV2,please input it again
    </logic:equal>
+   </div>
   </body>
 </html>

@@ -15,6 +15,7 @@ import po.Address;
 import po.Book;
 import po.Credit;
 import po.Order;
+import po.Review;
 import po.User;
 
 public class UserDao implements IUserDao{
@@ -156,7 +157,7 @@ public class UserDao implements IUserDao{
 	public ArrayList searchBook(String attribute, String value) {
 	
 		// TODO Auto-generated method stub
-		String sql="select * from Book where "+attribute+" like '%"+value+"%'";
+		String sql="select * from Book where UPPER("+attribute+") like '%"+value.toUpperCase()+"%'";
 		if(attribute.equals("isbn")){
 			try{
 				long isbn1=Long.parseLong(value);
@@ -969,6 +970,41 @@ public class UserDao implements IUserDao{
 			}
 		
 		return false;
+	}
+
+
+
+	public ArrayList getReviewForOneBook(int sku) {
+		// TODO Auto-generated method stub
+		String url="jdbc:oracle:thin:@oracle.cise.ufl.edu:1521:orcl";
+		String sql="select r.title, r.body, r.rating, r.reviewondate, c.username from review r, book b, customer c where r.booksku=b.booksku and r.customer_id=c.id and r.booksku="+sku;
+		ArrayList reviews=new ArrayList();
+		try{
+			Class.forName("oracle.jdbc.driver.OracleDriver");
+		}catch(java.lang.ClassNotFoundException e){
+			System.out.println(e.getMessage());
+		}
+		try{
+			Connection con=DriverManager.getConnection(url,"dawei","jolly900513");
+			Statement stmt=con.createStatement();
+			ResultSet rs=stmt.executeQuery(sql);
+			while(rs.next()){
+				String title=rs.getString(1);
+				String body=rs.getString(2);
+				int rating=rs.getInt(3);
+				Timestamp time=rs.getTimestamp(4);
+				String username=rs.getString(5);
+				Review review=new Review(title,body,rating,time,username);
+				reviews.add(review);
+			}
+			stmt.close();
+			con.close();
+			return reviews;
+		}catch(SQLException ex){
+				System.out.println(ex.getMessage());
+			}
+		
+		return null;
 	}
 	
 	

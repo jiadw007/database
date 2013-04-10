@@ -6,7 +6,7 @@
 <html> 
 	<head>
 		<title>Update Credit card </title>
-		<script src="js/jquery-1.9.1.js" language="JavaScript"></script>
+		<jsp:include page="/script.jsp" />
 	</head>
 	<body> 
 	    <%Credit credit=(Credit)request.getSession().getAttribute("editCredit"); 
@@ -16,6 +16,10 @@
 	      System.out.println(year);
 	      System.out.println(month);
 	      %>
+		<div id="northpanel">
+		<jsp:include page="/main.jsp" flush="true"></jsp:include>
+		</div>
+		<div id="centerpanel">
 		<html:form action="/updateCredit">
 		   <table>
 		   <tr>
@@ -130,6 +134,7 @@
   <logic:equal name="updateCredit" value="0">
   Update Credit card failed
   </logic:equal>
+  </div>
 	</body>
 </html>
 

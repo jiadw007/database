@@ -6,7 +6,7 @@
 <html>
 <head>
 <title>advance Select</title>
-
+    <title>advance Select</title>
 <link rel="stylesheet" type="text/css"
 	href="http://code.jquery.com/mobile/latest/jquery.mobile.min.css" />
 <link rel="stylesheet" type="text/css"
@@ -42,6 +42,10 @@
 	<div data-role="header" id="foo">
 		<h1>Sales Statistics</h1>
 	</div>
+    <div id="northpanel">
+		<jsp:include page="/employeeMain.jsp" flush="true"></jsp:include>
+		</div>
+		<div id="centerpanel">
 	<html:form action="/advanceSelect">
     From:
     <html:text property="from" styleId="from"></html:text>

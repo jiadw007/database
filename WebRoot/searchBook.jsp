@@ -6,9 +6,14 @@
 <html> 
 	<head>
 		<title>Search Book</title>
-		<script src="js/jquery-1.9.1.js" language="JavaScript"></script>
+		<jsp:include page="/script.jsp" />
 	</head>
 	<body>
+	<div id="northpanel">
+		<jsp:include page="/main.jsp" flush="true" />
+		</div>
+		<div id="centerpanel">
+	<div>
 		<html:form action="/searchBook">
 	    <html:select property="attribute">
 	    <html:option value="isbn">ISBN</html:option>
@@ -50,6 +55,8 @@
 		<html:link page="/queryShoppingCart.jsp">Shopping Cart</html:link>
 		<html:link page="/queryShoppingCart.jsp">CHECK OUT</html:link>
 		</logic:notEmpty>
+		</div>
+		</div>
 	</body>
 </html>
 

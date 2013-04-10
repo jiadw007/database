@@ -8,7 +8,7 @@
   <head>
     
     <title>Shopping Cart page</title>
-    
+    <jsp:include page="/script.jsp" />
   </head>
   
   <body>
@@ -18,6 +18,10 @@
       sum=sum+o.getAmount();
      
          %>
+		 <div id="northpanel">
+		<jsp:include page="/main.jsp" flush="true"></jsp:include>
+		</div>
+		<div id="centerpanel">
     <table>
     <tr>
     <td>BookSKU:</td>
@@ -44,5 +48,6 @@
     THE TOTAL AMOUNT:<%out.println(sum); %><br /><br />
     <html:link page="/searchBook.jsp">BUY MORE</html:link>
     <html:link action="/chooseShippingAddress.do">CHECK OUT</html:link>
+	</div>
   </body>
 </html>

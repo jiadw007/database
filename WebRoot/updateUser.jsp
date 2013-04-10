@@ -10,11 +10,15 @@
   <head>
     
     <title>updateUser</title>
-    <script src="js/jquery-1.9.1.js" language="JavaScript"></script>
+    <jsp:include page="/script.jsp" />
   </head>
   
   <body>
     <%User user=(User)request.getSession().getAttribute("user"); %>
+	<div id="northpanel">
+		<jsp:include page="/main.jsp" flush="true"></jsp:include>
+		</div>
+		<div id="centerpanel">
     <html:form action="/updateUser">
      Username: <bean:write name="user" property="username"/><br />
      Password: <html:password property="password" value="<%=user.getPassword() %>"></html:password><html:errors property="password" /><br />
@@ -29,5 +33,6 @@
     <logic:equal name="update" value="0">
     Update failed
     </logic:equal>
+	</div>
   </body>
 </html:html>

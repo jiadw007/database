@@ -9,11 +9,14 @@
 <html>
   <head>
     <title>manageAddress</title>
-    <script src="js/jquery-1.9.1.js" language="JavaScript"></script>
+    <jsp:include page="/script.jsp" />
   </head>
   
   <body>
-  
+  <div id="northpanel">
+		<jsp:include page="/main.jsp" flush="true"></jsp:include>
+		</div>
+		<div id="centerpanel">
   <logic:iterate id="addr" name="addresslist">
   <%Address a =(Address)addr; %>
   <html:form action="/checkAddress">
@@ -70,5 +73,6 @@
   <logic:equal name="default" value="1">
   you can't delete default address
   </logic:equal>
+  </div>
   </body>
 </html>

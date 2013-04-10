@@ -2,15 +2,6 @@
 <%@ taglib uri="http://struts.apache.org/tags-bean" prefix="bean"%> 
 <%@ taglib uri="http://struts.apache.org/tags-html" prefix="html"%>
 <%@ taglib uri="http://struts.apache.org/tags-logic" prefix="logic"%>
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html>
-  <head>
-
-    <title>main page</title>
-    
-    <script src="js/jquery-1.9.1.js" language="JavaScript"></script>
-  </head>
-  <body>
   Search Book<br />
   <html:link page="/searchBook.jsp">Search Book</html:link><br />
   Account Settings <br />
@@ -23,8 +14,5 @@
   Payment Method<br />
   <html:link action="manageCredit.do">Manage Payment Options</html:link><br />
   <html:link page="/addNewCredit.jsp">Add a Credit or Debit Card</html:link><br />
-  <logic:equal name="failed" value="0">
-  Your Order has been placed!
-  </logic:equal>
-  </body>
-</html>
+
+

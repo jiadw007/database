@@ -65,6 +65,6 @@ public class UserLoginAction extends Action {
 		}
 		System.out.println(user.getCreateTime());
 		request.getSession().setAttribute("user",user);
-		return new ActionForward("/main.jsp");
+		return new ActionForward("/index.jsp");
 	}
 }

@@ -6,9 +6,13 @@
 <html> 
 	<head>
 		<title>JSP for UpdateAddressForm form</title>
-		<script src="js/jquery-1.9.1.js" language="JavaScript"></script>
+		<jsp:include page="/script.jsp" />
 	</head>
 	<body> 
+	<div id="northpanel">
+		<jsp:include page="/main.jsp" flush="true"></jsp:include>
+		</div>
+		<div id="centerpanel">
 	    <%Address address=(Address)request.getSession().getAttribute("editAddress"); %>
 		<html:form action="/updateAddress">
 		   <table>
@@ -67,6 +71,7 @@
   <logic:equal name="update" value="0">
   Update address failed
   </logic:equal>
+  </div>
 	</body>
 </html>
 

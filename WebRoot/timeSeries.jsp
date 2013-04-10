@@ -6,9 +6,14 @@
 <html>
   <head>
     <title>time Series</title>
+	<jsp:include page="/script.jsp" />
   </head>
   
   <body>
+  <div id="northpanel">
+		<jsp:include page="/employeeMain.jsp" flush="true"></jsp:include>
+		</div>
+		<div id="centerpanel">
     <table>
     <tr>
     <td>YEAR</td>
@@ -26,5 +31,6 @@
     <logic:equal name="stats" value="1">
     NO STATS
     </logic:equal>
+	</div>
   </body>
 </html>

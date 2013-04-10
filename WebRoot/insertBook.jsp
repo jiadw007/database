@@ -5,9 +5,13 @@
 <html> 
 	<head>
 		<title>JSP for InsertBookForm form</title>
-		<script src="js/jquery-1.9.1.js" language="JavaScript"></script>
+		<jsp:include page="/script.jsp" />
 	</head>
 	<body>
+	<div id="northpanel">
+		<jsp:include page="/employeeMain.jsp" flush="true"></jsp:include>
+		</div>
+		<div id="centerpanel">
 		<html:form action="/insertBook">
 			ISBN : <html:text property="ISBN"/><html:errors property="ISBN"/><br/>
 			bookTitle : <html:text property="bookTitle"/><html:errors property="bookTitle"/><br/>
@@ -20,7 +24,7 @@
 			<html:submit/><html:cancel/>
 		</html:form>
 		<html:errors property="book"/>
-		
+		</div>
 	</body>
 </html>
 

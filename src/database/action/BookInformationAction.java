@@ -4,6 +4,8 @@
  */
 package database.action;
 
+import java.util.ArrayList;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import org.apache.struts.action.Action;
@@ -12,6 +14,7 @@ import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.ActionMapping;
 
 import po.Book;
+import po.Review;
 
 import dao.IUserDao;
 
@@ -54,8 +57,11 @@ public class BookInformationAction extends Action {
 		System.out.println(request.getParameter("is"));
 		Book book=new Book();
 		book=udao.queryBook(value);
+		int sku=book.getBooksku();
+		ArrayList review=udao.getReviewForOneBook(sku);
 		request.setAttribute("search",1);
     	request.getSession().setAttribute("searchBook", book);
+    	request.setAttribute("reviews",review);
 		return new ActionForward("/bookInformation.jsp");
 	}
 }

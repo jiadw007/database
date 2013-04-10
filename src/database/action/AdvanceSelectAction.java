@@ -56,7 +56,7 @@ public class AdvanceSelectAction extends DispatchAction {
 		String to=advanceSelectForm.getTo();
 		ArrayList books=edao.advanceSelectTopBook(from, to);
 		//System.out.println(books);
-		if(books!=null){
+		if(books!=null&&books.size()!=0){
 			request.setAttribute("advanceResult", books);
 			request.setAttribute("advance", 1);
 		}else{
@@ -71,7 +71,7 @@ public class AdvanceSelectAction extends DispatchAction {
 		String to=advanceSelectForm.getTo();
 		ArrayList sales=edao.advanceSelectTopSale(from, to);
 		//System.out.println(sales);
-		if(sales!=null){
+		if(sales!=null&&sales.size()!=0){
 			request.setAttribute("advanceResult", sales);
 			request.setAttribute("advance", 2);
 		}else{
@@ -86,7 +86,7 @@ public class AdvanceSelectAction extends DispatchAction {
 		String to=advanceSelectForm.getTo();
 		ArrayList buyers=edao.advanceSelectTopBuyer(from, to);
 		//System.out.println(buyers);
-		if(buyers!=null){
+		if(buyers!=null&&buyers.size()!=0){
 			request.setAttribute("advanceResult", buyers);
 			request.setAttribute("advance", 3);
 		}else{
@@ -101,7 +101,7 @@ public class AdvanceSelectAction extends DispatchAction {
 		String to=advanceSelectForm.getTo();
 		ArrayList suppliers=edao.advanceSelectTopSupplier(from, to);
 		//System.out.println(suppliers);
-		if(suppliers!=null){
+		if(suppliers!=null&&suppliers.size()!=0){
 			request.setAttribute("advanceResult", suppliers);
 			request.setAttribute("advance", 4);
 		}else{

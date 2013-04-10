@@ -6,9 +6,10 @@
 <html> 
 	<head>
 		<title>JSP for UserRegisterForm form</title>
-	
+	    <jsp:include page="/script.jsp" />
 	</head>
 	<body>
+
 		<html:form action="/userRegister">
 		    username : <html:text property="username"/><html:errors property="username"/><br/>
 			lastname : <html:text property="lastname"/><html:errors property="lastname"/><br/>
@@ -26,6 +27,7 @@
 			<html:submit/>
 		</html:form>
 		<html:errors property="register"/>
+	
 	</body>
 </html>
 

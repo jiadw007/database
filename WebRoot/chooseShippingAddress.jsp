@@ -7,9 +7,14 @@
 <html>
   <head>
     <title>choose Shipping Address</title>
+	<jsp:include page="/script.jsp" />
   </head>
   
   <body>
+  <div id="northpanel">
+		<jsp:include page="/main.jsp" flush="true"></jsp:include>
+		</div>
+		<div id="centerpanel">
     <logic:equal name="choose" value="1">
     <logic:iterate id="addr" name="addresslist">
     <%Address a=(Address)addr; %>
@@ -61,5 +66,6 @@
     <logic:equal name="choose" value="0">
     No address, please add a new address<html:link page="/addNewAddress.jsp">Add New Credit</html:link>
    </logic:equal>
+   </div>
   </body>
 </html>

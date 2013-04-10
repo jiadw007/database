@@ -8,10 +8,14 @@
   
     
     <title>book Information</title>
-    <script src="js/jquery-1.9.1.js" language="JavaScript"></script>
+    <jsp:include page="/script.jsp" />
   </head>
   
   <body>
+  <div id="northpanel">
+		<jsp:include page="/main.jsp" flush="true"></jsp:include>
+		</div>
+		<div id="centerpanel">
     <logic:equal name="search" value="1">
     <%Book b=(Book)request.getSession().getAttribute("searchBook"); 
       System.out.println(b);
@@ -23,7 +27,7 @@
 		<td><bean:write name="searchBook" property="isbn"/></td>
 		</tr>
 	    <tr>
-		<td>TITLE:</td>
+		<td>Book TITLE:</td>
 		<td><bean:write name="searchBook" property="booktitle"/></td>
 		</tr>
 		<tr>
@@ -50,8 +54,31 @@
 		<td>IMAGE</td>
 		<td><img src="<%=b.getFile()%>"></td>
 		</tr>
+		<logic:iterate id="review" name="reviews">
+		<tr>
+		<td>Review Title</td>
+		<td><bean:write name="review" property="title"/></td>
+		</tr>
+		<tr>
+		<td>Username</td>
+		<td><bean:write name="review" property="username"/></td>
+		</tr>
+		<tr>
+		<td>rating</td>
+		<td><bean:write name="review" property="rating"/></td>
+		</tr>
+		<tr>
+		<td>Review Date</td>
+		<td><bean:write name="review" property="reviewondate"/></td>
+		</tr>
+		<tr>
+		<td>Body</td>
+		<td><bean:write name="review" property="body"/></td>
+		</tr>
+		</logic:iterate>
 		</table>
 		<html:link page="/addToShoppingCart.jsp">Add to Cart</html:link>
 		</logic:equal>
+		</div>
   </body>
 </html>

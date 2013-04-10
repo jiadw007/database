@@ -5,8 +5,13 @@
 <html> 
 	<head>
 		<title>Add New Credit Form </title>
+		<jsp:include page="/script.jsp" />
 	</head>
 	<body>
+	<div id="northpanel">
+		<jsp:include page="/main.jsp" flush="true"></jsp:include>
+		</div>
+		<div id="centerpanel">
 		<html:form action="/addNewCredit"> 
 		    cardNumber : <html:text property="cardnumber"/><html:errors property="cardnumber"/><br/>
 		    name on card : <html:text property="nameoncard"/><html:errors property="nameoncard"/><br/>
@@ -66,6 +71,7 @@
 	    <logic:equal name="newCredit"value="0">
 	    New Credit added failed
 	    </logic:equal>
+		</div>
 	</body>
 </html>
 

@@ -6,9 +6,10 @@
 <html> 
 	<head>
 		<title>JSP for employeeLoginForm form</title>
-		<script src="js/jquery-1.9.1.js" language="JavaScript"></script>
+		<jsp:include page="/script.jsp" />
 	</head>
 	<body>
+
 		<html:form action="/employeeLogin"> 
 	    loginname:<html:text property="loginname"></html:text><br />
 		password:<html:password property="password"></html:password><br/>
@@ -16,6 +17,7 @@
 		</html:form>
 		<br /><br />
 		<html:errors property="employeelogin"/>
+
 	</body>
 </html>
 
