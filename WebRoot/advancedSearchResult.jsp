@@ -10,12 +10,11 @@
     <script src="" language="Javascript"></script>
   
   </head>
-  
   <body>
   <div id="northpanel">
 		<jsp:include page="/main.jsp" flush="true"></jsp:include>
-		</div>
-		<div id="centerpanel">
+  </div>
+  <div id="centerpanel">
     <logic:present name="advancedSearch">
     <logic:equal name="advancedSearch" value="1">
     <table id="advsearch">
@@ -47,6 +46,6 @@
 		We are sorry for no results for you
 	</logic:equal>
 	</logic:present>
-	</div>
+  </div>
   </body>
 </html>

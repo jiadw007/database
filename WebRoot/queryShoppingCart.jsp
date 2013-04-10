@@ -18,7 +18,7 @@
       sum=sum+o.getAmount();
      
          %>
-		 <div id="northpanel">
+		<div id="northpanel">
 		<jsp:include page="/main.jsp" flush="true"></jsp:include>
 		</div>
 		<div id="centerpanel">

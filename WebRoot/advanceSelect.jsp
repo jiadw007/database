@@ -6,22 +6,7 @@
 <html>
 <head>
 <title>advance Select</title>
-    <title>advance Select</title>
-<link rel="stylesheet" type="text/css"
-	href="http://code.jquery.com/mobile/latest/jquery.mobile.min.css" />
-<link rel="stylesheet" type="text/css"
-	href="http://dev.jtsage.com/cdn/datebox/latest/jqm-datebox.min.css" />
-
-<script type="text/javascript"
-	src="http://code.jquery.com/jquery-1.9.0.min.js"></script>
-<script type="text/javascript"
-	src="http://code.jquery.com/mobile/latest/jquery.mobile.min.js"></script>
-
-<script type="text/javascript"
-	src="http://dev.jtsage.com/cdn/datebox/latest/jqm-datebox.core.min.js"></script>
-<script type="text/javascript"
-	src="http://dev.jtsage.com/cdn/datebox/latest/jqm-datebox.mode.calbox.min.js"></script>
-
+    <jsp:include page="/script.jsp"></jsp:include>
 <script>
 	$(function() {
 		$('#from').datebox({
@@ -39,13 +24,13 @@
 
 <body>
 	<div data-role="page">
-	<div data-role="header" id="foo">
-		<h1>Sales Statistics</h1>
-	</div>
-    <div id="northpanel">
-		<jsp:include page="/employeeMain.jsp" flush="true"></jsp:include>
+	<div id="northpanel">
+		<div data-role="header" id="foo">
+			<h1>Sales Statistics</h1>
+			<jsp:include page="/employeeMain.jsp" flush="true"></jsp:include>
 		</div>
-		<div id="centerpanel">
+	</div>
+	<div id="centerpanel">
 	<html:form action="/advanceSelect">
     From:
     <html:text property="from" styleId="from"></html:text>
@@ -180,6 +165,7 @@
 				</logic:iterate>
 			</table>
 		</logic:equal>
+	</div>
 	</div>
 </body>
 </html>

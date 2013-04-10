@@ -7,40 +7,45 @@
 	<head>
 		<title>Advanced Search Book</title>
 		<jsp:include page="/script.jsp" />
+		<script>
+			$(function() {
+				$('#year').datebox({
+					"mode" : "calbox",
+					"dateFormat" : "%Y-%m-%d"
+				});
+			});	
+		</script>
 	</head>
 	<body>
+	<div data-role='page'>
 	<div id="northpanel">
-		<jsp:include page="/main.jsp" flush="true"></jsp:include>
+		<div data-role='header'>
+			<h1>Advanced Search</h1>
+			<jsp:include page="/main.jsp" flush="true"></jsp:include>
 		</div>
-		<div id="centerpanel">
+	</div>
+	<div data-role="content">
 		<html:form action="/advancedSearch"> 
 		    ISBN : <html:text property="isbn"/><html:errors property="isbn"/><br/>
 			AUTHOR : <html:text property="author"/><html:errors property="author"/><br/>
 			TITLE : <html:text property="title"/><html:errors property="title"/><br/>
-			PUBLISH DATE <html:select property="time" value="Any">
+			PUBLISH DATE 
+			<div class="ui-grid-a">
+				<div class="ui-block-a">		
+			        <html:select property="time" value="Before">
 			             <html:option value="Any">Any</html:option>
 			             <html:option value="Before">Before</html:option>
 			             <html:option value="After">After</html:option>
-			             </html:select>
-			             <html:select property="month" value="">
-			             <html:option value="">Month</html:option>
-			             <html:option value="01">January</html:option>
-			             <html:option value="02">February</html:option>
-			             <html:option value="03">March</html:option>
-			             <html:option value="04">April</html:option>
-			             <html:option value="05">May</html:option>
-			             <html:option value="06">June</html:option>
-			             <html:option value="07">July</html:option>
-			             <html:option value="08">August</html:option>
-			             <html:option value="09">September</html:option>
-			             <html:option value="10">October</html:option>
-			             <html:option value="11">November</html:option>
-			             <html:option value="12">December</html:option>
-			             </html:select>
-			             <html:text property="year" styleId="year"></html:text><br>
+			         </html:select>
+			    </div>
+			<div class="ui-block-b">
+			    <html:text property="year" styleId="year"></html:text>
+			</div>
+			</div>
 			<html:submit value="Search"/><html:cancel/>
 		</html:form>
-		</div>
+	</div>
+	</div>
 	</body>
 </html>
 
