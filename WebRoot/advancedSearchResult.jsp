@@ -6,10 +6,14 @@
 <html>
   <head>
     <title>advancedSearchResult</title>
-    <script src="js/jquery-1.9.1.js" language="JavaScript"></script>
+    <jsp:include page="/script.jsp" />
   </head>
   
   <body>
+  <div id="northpanel">
+		<jsp:include page="/main.jsp" flush="true"></jsp:include>
+		</div>
+		<div id="centerpanel">
     <logic:present name="advancedSearch">
     <logic:equal name="advancedSearch" value="1">
     <logic:iterate id="book" name="pc" property="smallList">
@@ -46,5 +50,6 @@
 		We are sorry for no results for you
 	</logic:equal>
 	</logic:present>
+	</div>
   </body>
 </html>

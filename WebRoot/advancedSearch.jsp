@@ -6,9 +6,13 @@
 <html> 
 	<head>
 		<title>Advanced Search Book</title>
-		<script src="js/jquery-1.9.1.js" language="JavaScript"></script>
+		<jsp:include page="/script.jsp" />
 	</head>
 	<body>
+	<div id="northpanel">
+		<jsp:include page="/main.jsp" flush="true"></jsp:include>
+		</div>
+		<div id="centerpanel">
 		<html:form action="/advancedSearch"> 
 		    ISBN : <html:text property="isbn"/><html:errors property="isbn"/><br/>
 			AUTHOR : <html:text property="author"/><html:errors property="author"/><br/>
@@ -36,6 +40,7 @@
 			             <html:text property="year"></html:text><br>
 			<html:submit value="Search"/><html:cancel/>
 		</html:form>
+		</div>
 	</body>
 </html>
 

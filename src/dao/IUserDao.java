@@ -60,4 +60,8 @@ public interface IUserDao {
 	public abstract boolean addNewOrder(Order order);
 	
 	public abstract boolean updateBook(int sku,int quantity);
+	
+	/*review*/
+	
+	public abstract ArrayList getReviewForOneBook(int sku);
 }

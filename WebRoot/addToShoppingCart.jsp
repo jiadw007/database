@@ -5,8 +5,13 @@
 <html> 
 	<head>
 		<title>JSP for AddToShoppingCartForm form</title>
+		<jsp:include page="/script.jsp" />
 	</head>
 	<body>
+	    <div id="northpanel">
+		<jsp:include page="/main.jsp" flush="true"></jsp:include>
+		</div>
+		<div id="centerpanel">
 		<html:form action="/addToShoppingCart">
 		<table>
 		<tr>
@@ -32,6 +37,7 @@
 		</table>
 	    <html:submit value="Add to Cart"/>
 		</html:form>
+		</div>
 	</body>
 </html>
 

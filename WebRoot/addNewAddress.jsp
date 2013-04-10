@@ -6,9 +6,13 @@
 <html> 
 	<head>
 		<title>Add New Address</title>
-		<script src="js/jquery-1.9.1.js" language="JavaScript"></script>
+		<jsp:include page="/script.jsp" />
 	</head>
 	<body>
+	    <div id="northpanel">
+		<jsp:include page="/main.jsp" flush="true"></jsp:include>
+		</div>
+		<div id="centerpanel">
 		<html:form action="/addNewAddress">
 			firstname : <html:text property="firstname"/><html:errors property="firstname"/><br/>
 			lastname : <html:text property="lastname"/><html:errors property="lastname"/><br/>
@@ -21,12 +25,14 @@
 			addrline2 : <html:text property="addrline2"/><html:errors property="addrline2"/><br/>
 			<html:submit/>
 		</html:form>
+
 	    <logic:equal name="newAddress"value="1">
 	    New Address added success
 	    </logic:equal>
 	    <logic:equal name="newAddress"value="0">
 	    New Address added failed
 	    </logic:equal>
+	    </div>
 	</body>
 </html>
 

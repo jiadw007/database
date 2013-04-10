@@ -7,7 +7,7 @@
 <html> 
 	<head>
 		<title>JSP for UserLoginForm form</title>
-		<script src="js/jquery-1.9.1.js" language="JavaScript"></script>
+		<jsp:include page="/script.jsp" />
 	</head>
 	<body>
 		<html:form action="/userLogin"> 

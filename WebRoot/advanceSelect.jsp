@@ -7,9 +7,7 @@
   <head>
     
     <title>advance Select</title>
-    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css" />
-    <script src="js/jquery-1.9.1.js" language="JavaScript"></script>
-    <script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
+   <jsp:include page="/script.jsp" />
     <script>
   $(function() {
     
@@ -37,6 +35,10 @@
   </head>
   
   <body>
+    <div id="northpanel">
+		<jsp:include page="/employeeMain.jsp" flush="true"></jsp:include>
+		</div>
+		<div id="centerpanel">
     <html:form action="/advanceSelect">
     <label for="from">From</label>
     <html:text property="from" styleId="from"></html:text>
@@ -129,5 +131,6 @@
     </logic:iterate>
     </table>
     </logic:equal>
+	</div>
   </body>
 </html>

@@ -7,10 +7,14 @@
   <head>
     
     <title>ALL ORDER INFORMATION</title>
-    <script src="js/jquery-1.9.1.js" language="JavaScript"></script>
+   <jsp:include page="/script.jsp"/>
   </head>
   
   <body>
+  <div id="northpanel">
+		<jsp:include page="/employeeMain.jsp" flush="true"></jsp:include>
+		</div>
+		<div id="centerpanel">
     <div align="center"><font face="微软雅黑" size="5">ALL ORDER INFORMATION</font></div>
     <br><br>
      <table align="center" width="1000" bgColor="#FFFFFF">
@@ -57,6 +61,7 @@
 		</logic:equal>
 		</font>
      </div>
+	 </div>
   </body>
    <script language="JavaScript">
        function del()
