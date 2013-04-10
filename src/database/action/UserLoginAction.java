@@ -4,6 +4,8 @@
  */
 package database.action;
 
+import java.util.ArrayList;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import org.apache.struts.action.Action;
@@ -64,7 +66,12 @@ public class UserLoginAction extends Action {
 			return mapping.getInputForward();
 		}
 		System.out.println(user.getCreateTime());
+		ArrayList books=udao.selectTopBook();
+		//if(books!=null){
+			//System.out.println("sasdsa");
+		//}
 		request.getSession().setAttribute("user",user);
+		request.getSession().setAttribute("topbook", books);
 		return new ActionForward("/index.jsp");
 	}
 }

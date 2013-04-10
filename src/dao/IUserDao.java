@@ -64,4 +64,6 @@ public interface IUserDao {
 	/*review*/
 	
 	public abstract ArrayList getReviewForOneBook(int sku);
+	
+	public abstract ArrayList selectTopBook();
 }
