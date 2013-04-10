@@ -32,8 +32,6 @@ public class AdvancedSearchForm extends ActionForm {
     
 	private String time;
 	
-	private String month;
-	
 	private String year;
 	/*
 	 * Generated Methods
@@ -116,13 +114,7 @@ public class AdvancedSearchForm extends ActionForm {
 		this.time = time;
 	}
 
-	public String getMonth() {
-		return month;
-	}
 
-	public void setMonth(String month) {
-		this.month = month;
-	}
 
 	public String getYear() {
 		return year;

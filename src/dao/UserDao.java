@@ -235,9 +235,9 @@ public class UserDao implements IUserDao{
 		if(title!=""){
 			
 			if(sql1!=sql){
-				sql1=sql1+" and booktitle like '%"+title+"%'";
+				sql1=sql1+" and Upper(booktitle) like '%"+title.toUpperCase()+"%'";
 			}else{
-				sql1=sql+"booktitle like '%"+title+"%'";
+				sql1=sql+"Upper(booktitle) like '%"+title.toUpperCase()+"%'";
 			}
 		}
 

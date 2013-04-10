@@ -61,7 +61,10 @@ public class BookInformationAction extends Action {
 		ArrayList review=udao.getReviewForOneBook(sku);
 		request.setAttribute("search",1);
     	request.getSession().setAttribute("searchBook", book);
-    	request.setAttribute("reviews",review);
+		if(review!=null&&review.size()!=0){
+		    request.setAttribute("reviews",review);
+		}
+    	
 		return new ActionForward("/bookInformation.jsp");
 	}
 }

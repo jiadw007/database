@@ -32,6 +32,9 @@
     </tr>
     </logic:iterate>
     </table>
+     <logic:equal name="topbuyer" value="0">
+    No results for you
+    </logic:equal>
 	</div>
   </body>
 </html>

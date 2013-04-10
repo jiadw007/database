@@ -51,7 +51,7 @@ public class TimeSeriesAction extends Action {
 			HttpServletRequest request, HttpServletResponse response) {
 		// TODO Auto-generated method stub
 		ArrayList time=edao.timeseries();
-		if(time!=null){
+		if(time!=null&&time.size()!=0){
 			request.setAttribute("time", time);
 		}else{
 			request.setAttribute("stats", 1);
