@@ -33,7 +33,7 @@
 			             <html:option value="11">November</html:option>
 			             <html:option value="12">December</html:option>
 			             </html:select>
-			             <html:text property="year"></html:text><br>
+			             <html:text property="year" styleId="year"></html:text><br>
 			<html:submit value="Search"/><html:cancel/>
 		</html:form>
 	</body>

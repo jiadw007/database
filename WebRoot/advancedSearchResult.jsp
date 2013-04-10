@@ -7,32 +7,29 @@
   <head>
     <title>advancedSearchResult</title>
     <script src="js/jquery-1.9.1.js" language="JavaScript"></script>
+    <script src="" language="Javascript"></script>
+  
   </head>
   
   <body>
     <logic:present name="advancedSearch">
     <logic:equal name="advancedSearch" value="1">
+    <table id="advsearch">
+    <tr>
+		<th>ISBN</th>
+		<th>Title</th>
+		<th>Author</th>
+		<th>Publish Time</th>
+	<tr>
     <logic:iterate id="book" name="pc" property="smallList">
-    <table>
-		<tr>
-		<td>ISBN:</td>
-		<td><html:link action="bookInformation.do" paramId="is" paramName="book" paramProperty="isbn"><bean:write name="book" property="isbn"/></html:link></td>
+    	<tr>
+			<td><html:link action="bookInformation.do" paramId="is" paramName="book" paramProperty="isbn"><bean:write name="book" property="isbn"/></html:link></td>
+			<td><bean:write name="book" property="booktitle"/></td>
+			<td><bean:write name="book" property="author"/></td>
+			<td><bean:write name="book" property="publishtime"/></td>
 		</tr>
-	    <tr>
-		<td>TITLE:</td>
-		<td><bean:write name="book" property="booktitle"/></td>
-		</tr>
-		<tr>
-		<td>AUTHOR:</td>
-		<td><bean:write name="book" property="author"/></td>
-		</tr>
-		<tr>
-		<td>PUBLISHTIME:</td>
-		<td><bean:write name="book" property="publishtime"/></td>
-		</tr>
-		</table>
-		<br /><br /><br />
     </logic:iterate>
+    </table>
     <html:link action="advancedQuery.do?PageIndex=1">start</html:link>
      <logic:equal name="pc" property="firstPage" value="false">
      <html:link action="advancedQuery.do"paramId="PageIndex" paramName="pc" paramProperty="previousPageIndex">previous</html:link>
