@@ -30,6 +30,7 @@
 			<jsp:include page="/employeeMain.jsp" flush="true"></jsp:include>
 		</div>
 	</div>
+	<div data-role="content">
 	<div id="centerpanel">
 	<html:form action="/advanceSelect">
     From:
@@ -165,6 +166,7 @@
 				</logic:iterate>
 			</table>
 		</logic:equal>
+	</div>
 	</div>
 	</div>
 </body>

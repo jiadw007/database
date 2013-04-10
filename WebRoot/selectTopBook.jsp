@@ -11,9 +11,9 @@
   </head>
   
   <body>
-  <div id="northpanel">
+  	<div id="northpanel">
 		<jsp:include page="/employeeMain.jsp" flush="true"></jsp:include>
-		</div>
+	</div>
 		<div id="centerpanel">
     <table>
     <tr>

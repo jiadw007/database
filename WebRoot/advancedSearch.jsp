@@ -42,7 +42,8 @@
 			    <html:text property="year" styleId="year"></html:text>
 			</div>
 			</div>
-			<html:submit value="Search"/><html:cancel/>
+			<html:submit value="Search"/>
+			<html:reset/>
 		</html:form>
 	</div>
 	</div>

@@ -7,13 +7,17 @@
   <head>
     <title>advancedSearchResult</title>
     <jsp:include page="/script.jsp" />
-    <script src="" language="Javascript"></script>
-  
+    <script src="" language="Javascript">
+    </script>
   </head>
   <body>
-  <div id="northpanel">
-		<jsp:include page="/main.jsp" flush="true"></jsp:include>
-  </div>
+  <div data-roel='page'>
+	<div id="northpanel">
+		<div data-role='header'>
+			<h1>Search Result</h1>
+			<jsp:include page="/main.jsp" flush="true"></jsp:include>
+		</div>
+	</div>
   <div id="centerpanel">
     <logic:present name="advancedSearch">
     <logic:equal name="advancedSearch" value="1">
@@ -46,6 +50,7 @@
 		We are sorry for no results for you
 	</logic:equal>
 	</logic:present>
+  </div>
   </div>
   </body>
 </html>
