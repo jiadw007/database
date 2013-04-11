@@ -2,7 +2,7 @@
 <%@ taglib uri="http://struts.apache.org/tags-bean" prefix="bean"%>
 <%@ taglib uri="http://struts.apache.org/tags-html" prefix="html"%>
 <%@ taglib uri="http://struts.apache.org/tags-logic" prefix="logic"%>
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!DOCTYPE HTML>
 <html>
 <head>
 <title>Bookstore Showcase</title>
@@ -16,6 +16,11 @@
 		<jsp:include page="/main.jsp" flush="true" />
 	</div>
 	<div id="centerpanel" data-role="content">
+	  <div style="margin: 10px">
+	  	<a href="userRegister.jsp" data-role="button" data-icon="forward" data-theme="e">New Customer</a>
+	  	<br>
+	  </div>
+	  <div>
 	  <logic:equal name="failed" value="0">
 	  Your Order has been placed!
 	  </logic:equal>
@@ -37,6 +42,7 @@
 	  </li>	  
 	  </logic:iterate>
 	  </ul>
+	  </div>
 	</div>
   </div>
 </body>
