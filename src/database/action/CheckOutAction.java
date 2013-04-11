@@ -71,6 +71,7 @@ public class CheckOutAction extends Action {
 				udao.updateBook(sku, quantity);
 			}
 			request.setAttribute("failed", 0);
+			request.getSession().setAttribute("shoppingcart", null);
 			return new ActionForward("/index.jsp");
 		}else{
 			request.setAttribute("choose", 1);

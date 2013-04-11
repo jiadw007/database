@@ -18,7 +18,6 @@ import po.Order;
 import po.User;
 
 import dao.IUserDao;
-import database.form.ChoosePaymentForm;
 
 /** 
  * MyEclipse Struts
@@ -54,10 +53,9 @@ public class ChoosePaymentAction extends Action {
 	 */
 	public ActionForward execute(ActionMapping mapping, ActionForm form,
 			HttpServletRequest request, HttpServletResponse response) {
-		ChoosePaymentForm choosePaymentForm = (ChoosePaymentForm) form;// TODO Auto-generated method stub
 		User user=(User)request.getSession().getAttribute("user");
 		int cid=user.getID();
-		int aid=Integer.parseInt(choosePaymentForm.getAid());
+		int aid=Integer.parseInt(request.getParameter("aid"));
 		System.out.println(aid);
 		System.out.println(cid);
 		ArrayList orders=(ArrayList) request.getSession().getAttribute("shoppingcart");

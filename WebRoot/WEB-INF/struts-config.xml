@@ -21,7 +21,6 @@
     <form-bean name="checkCreditForm" type="database.form.CheckCreditForm" />
     <form-bean name="updateCreditForm" type="database.form.UpdateCreditForm" />
     <form-bean name="addToShoppingCartForm" type="database.form.AddToShoppingCartForm" />
-    <form-bean name="choosePaymentForm" type="database.form.ChoosePaymentForm" />
     <form-bean name="checkOutForm" type="database.form.CheckOutForm" />
     <form-bean name="queryOneOrderForm" type="database.form.QueryOneOrderForm" />
     <form-bean name="updateOrderForm" type="database.form.UpdateOrderForm" />
@@ -243,9 +242,7 @@
       <set-property property="cancellable" value="true" />
     </action>
     <action
-      attribute="choosePaymentForm"
       input="/chooseShippingAddress.jsp"
-      name="choosePaymentForm"
       path="/choosePayment"
       scope="request"
       type="org.springframework.web.struts.DelegatingActionProxy">
