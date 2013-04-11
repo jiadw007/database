@@ -76,8 +76,7 @@
 		</tr>
 		</logic:iterate>
 		</table>
-		
-		<a href="addToShoppingCart.jsp" data-role="button" data-icon="plus" data-theme="e">Add to Cart 2</a>
+		<a href="addToShoppingCart.jsp" data-role="button" data-icon="plus" data-theme="e">Add to Cart</a>
 		</logic:equal>
 		</div>
 		</div>

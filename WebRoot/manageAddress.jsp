@@ -10,16 +10,21 @@
   <head>
     <title>manageAddress</title>
     <jsp:include page="/script.jsp" />
+    <script>
+    	$(function(){
+    		$('.delete').button();
+    	});
+    </script>
   </head>
-  
   <body>
-  <div id="northpanel">
+  <div id="northpanel" data-role="header">
+  		<h1>Manager Your Shipping and Billing Address</h1>
 		<jsp:include page="/main.jsp" flush="true"></jsp:include>
 		</div>
-		<div id="centerpanel">
+		<div id="centerpanel" data-role="content">
   <logic:iterate id="addr" name="addresslist">
   <%Address a =(Address)addr; %>
-  <html:form action="/checkAddress">
+  <html:form action="/checkAddress" method="GET">
   <html:hidden property="id" value="<%=String.valueOf(a.getId()) %>"/>
   <table>
   <tr>
@@ -59,11 +64,18 @@
   <td><bean:write name="addr" property="addressline2"/></td>
   </tr>
   </table>
-  <html:submit value="Edit" /><html:link action="/deleteAddress.do" paramId="id" paramName="addr" paramProperty="id">Delete</html:link>
+  <div class="ui-grid-a">
+  <div class="ui-block-a">
+  <html:submit value="Edit" />
+  </div>
+  <div class="ui-block-b">
+  <html:link action="/deleteAddress.do" paramId="id" paramName="addr" paramProperty="id" styleClass="delete">Delete</html:link>
+  </div>
+  </div>
   </html:form>
   </logic:iterate>
   <br />
-  <html:link page="/addNewAddress.jsp">Add New Address</html:link><br />
+  <a href="/addNewAddress.jsp" data-role="button" data-icon="plus" data-theme="b">Add New Address</a><br />
   <logic:equal name="noAddress"value="1">
   delete address success
   </logic:equal>

@@ -20,17 +20,23 @@
 	  Your Order has been placed!
 	  </logic:equal>
 	  <%int i=1; %>
+	  <ul data-role="listview">
 	  <logic:iterate id="book" name="topbook">
-	  <%Book b=(Book)book;
-	    %>
-	  <ul data-role="listview" >
-	  <li><%out.println(i++); %></li>
-	  <li>ISBN:<html:link action="bookInformation.do" paramId="is" paramName="book" paramProperty="isbn"><bean:write name="book" property="isbn"/></html:link></li>
-	  <li>Book Title:<bean:write name="book" property="isbn"/></li>
-	  <li>Author:<bean:write name="book" property="author"/></li>
-	  <li>Image:<img src="<%=b.getFile() %>" /></li>
-	  </ul>
+	  <%Book b=(Book)book;%>
+	  <li>
+	  <html:link action="bookInformation.do" paramId="is" paramName="book" paramProperty="isbn">
+	  <img src="<%=b.getFile() %>" />
+	  <%//out.println(i);
+	  	i++;
+	   %>
+	  <!--<li>ISBN:<bean:write name="book" property="isbn"/></li>
+	  -->
+	  <h3><bean:write name="book" property="booktitle"/></h3>
+	  <p>Author:<bean:write name="book" property="author"/></p>
+	  </html:link>
+	  </li>	  
 	  </logic:iterate>
+	  </ul>
 	</div>
   </div>
 </body>

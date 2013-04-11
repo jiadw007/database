@@ -6,8 +6,9 @@
 	  <a href="#popupMenu" data-rel="popup" data-role="button" data-inline="true" data-transition="slideup" data-icon="gear" data-theme="e" class="ui-btn-right">Actions...</a>
       <div data-role="popup" id="popupMenu" data-theme="d">
       <ul data-role="listview" data-inset="true" style="min-width:210px;" data-theme="d">
-          <li data-role="divider" data-theme="e">Search Book</li>
+          <li data-role="divider" data-theme="e">Shopping</li>
           <li><html:link page="/searchBook.jsp">Search Book</html:link></li>
+          <li><html:link page="/queryShoppingCart.jsp">Shopping Cart</html:link></li>
           <li data-role="divider" data-theme="e">Account Settings</li>
           <li><html:link page="/updateUser.jsp">Change Account Settings</html:link></li>
           <li><html:link action="manageAddress.do">Manage Address Book</html:link></li>

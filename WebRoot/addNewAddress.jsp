@@ -12,7 +12,7 @@
 	<div data-role="page">
 	<div id="northpanel">
 		<div data-role='header'>
-			<h1>Advanced Search</h1>
+			<h1>Add New Address</h1>
 			<jsp:include page="/main.jsp" flush="true"></jsp:include>
 		</div>
 	</div>

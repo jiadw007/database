@@ -12,20 +12,19 @@
   </head>
   
   <body>
-    <div id="northpanel">
+    <div id="northpanel" data-role="header">
+    	<h1>All Book Information</h1>
 		<jsp:include page="/employeeMain.jsp" flush="true"></jsp:include>
 		</div>
-		<div id="centerpanel">
-    <div align="center"><font face="微软雅黑" size="5">ALL BOOK INFORMATION</font></div>
-    <br><br>
+	<div id="centerpanel" data-role="content">
      <table align="center" width="1000" bgColor="#FFFFFF">
      <tr>
-     <td align="center" valign="middle" width="100">BOOKSKU</td>
-     <td align="center" valign="middle" width="100">ISBN</td>
-     <td align="center" valign="middle" width="100">QUANTITY</td>
-     <td align="center" valign="middle" width="100">UNITPRICE</td>
-     <td align="center" valign="middle" width="100">BOOKTITLE</td>
-     <td align="center" valign="middle" width="100">AUTHOR</td>
+     <th align="center" valign="middle" width="100">BOOKSKU</th>
+     <th align="center" valign="middle" width="100">ISBN</th>
+     <th align="center" valign="middle" width="100">QUANTITY</th>
+     <th align="center" valign="middle" width="100">UNITPRICE</th>
+     <th align="center" valign="middle" width="100">BOOKTITLE</th>
+     <th align="center" valign="middle" width="100">AUTHOR</th>
      </tr>
      <logic:iterate id="book" name="pc" property="smallList">
      <tr>

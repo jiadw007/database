@@ -11,14 +11,15 @@
   </head>
   
   <body>
-  <div id="northpanel">
+  <div id="northpanel" data-role="header">
+  <h1>Checkout - Address</h1>
 		<jsp:include page="/main.jsp" flush="true"></jsp:include>
 		</div>
-		<div id="centerpanel">
+  	<div id="centerpanel" data-role="content">
     <logic:equal name="choose" value="1">
     <logic:iterate id="addr" name="addresslist">
     <%Address a=(Address)addr; %>
-    <html:form action="/choosePayment">
+    <html:form action="/choosePayment" method="GET">
     <html:radio property="aid" value="<%=String.valueOf(a.getId()) %>">
     <table>
   <tr>
@@ -59,7 +60,7 @@
   </tr>
   </table>
     </html:radio>
-    <html:submit value="Next Step"/>
+    <html:submit value="Use This Address"/>
     </html:form>
     </logic:iterate>
     </logic:equal>

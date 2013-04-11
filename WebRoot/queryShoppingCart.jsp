@@ -12,16 +12,16 @@
   </head>
   
   <body>
-  <%float sum=0; %>
+  		<div id="northpanel" data-role="header">
+  		<h1>Shopping Cart</h1>
+		<jsp:include page="/main.jsp" flush="true"></jsp:include>
+		</div>
+		<div id="centerpanel" data-role="content">
+  	<%float sum=0; %>
     <logic:iterate id="order" name="shoppingcart">
     <%Order o=(Order)order;
       sum=sum+o.getAmount();
-     
-         %>
-		<div id="northpanel">
-		<jsp:include page="/main.jsp" flush="true"></jsp:include>
-		</div>
-		<div id="centerpanel">
+    %>
     <table>
     <tr>
     <td>BookSKU:</td>
@@ -46,8 +46,8 @@
     </table><br />
     </logic:iterate><br />
     THE TOTAL AMOUNT:<%out.println(sum); %><br /><br />
-    <html:link page="/searchBook.jsp">BUY MORE</html:link>
-    <html:link action="/chooseShippingAddress.do">CHECK OUT</html:link>
+    <a href="/database/index.do" data-role="button" data-icon="back" data-theme="b">Buy more book</a>
+    <a href="/database/chooseShippingAddress.do" data-role="button" data-icon="info" data-theme="e">CHECK OUT</a>
 	</div>
   </body>
 </html>

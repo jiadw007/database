@@ -13,10 +13,11 @@
   </head>
   
   <body>
-  <div id="northpanel">
+  <div id="northpanel" data-role="header">
+  		<h1>Manage Your Credit Cards</h1>
 		<jsp:include page="/main.jsp" flush="true"></jsp:include>
 		</div>
-		<div id="centerpanel">
+	<div id="centerpanel" data-role="content">
   <logic:iterate id="credit" name="creditlist">
   <%Credit c=(Credit)credit; %>
   <html:form action="/checkCredit">
