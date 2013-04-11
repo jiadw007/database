@@ -66,12 +66,10 @@ public class UserLoginAction extends Action {
 			return mapping.getInputForward();
 		}
 		System.out.println(user.getCreateTime());
-		ArrayList books=udao.selectTopBook();
 		//if(books!=null){
 			//System.out.println("sasdsa");
 		//}
 		request.getSession().setAttribute("user",user);
-		request.getSession().setAttribute("topbook", books);
-		return new ActionForward("/index.jsp");
+		return new ActionForward("/index.do");
 	}
 }

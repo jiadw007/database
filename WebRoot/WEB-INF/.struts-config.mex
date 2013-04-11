@@ -39,6 +39,7 @@
   <StrutsActivity path="/queryOneOrder.do" location="650,2250" dimension="267,104" />
   <StrutsActivity path="/updateOrder.do" location="1550,2250" dimension="251,104" />
   <StrutsActivity path="/advanceSelect.do" location="350,2450" dimension="256,104" />
+  <StrutsActivity path="/timeSeries.do" location="1250,2450" dimension="236,104" />
   <StrutsActivity path="/userLogin.jsp" location="650,50" dimension="114,53" />
   <StrutsActivity path="/employeeLogin.jsp" location="350,250" dimension="146,53" />
   <StrutsActivity path="/register.jsp" location="650,250" dimension="102,53" />
@@ -62,7 +63,7 @@
   <StrutsActivity path="/updateOrder.jsp" location="50,2450" dimension="133,53" />
   <StrutsActivity path="/updateBook.jsp" location="350,850" dimension="129,53" />
   <StrutsActivity path="/insertBook" location="50,450" dimension="100,53" />
-  <StrutsActivity path="/timeSeries.do" location="1250,2450" dimension="236,104" />
+  <StrutsActivity path="/index.do" location="2150,1050" dimension="205,104" />
   <StrutsTransition id="/chooseShippingAddress.jsp,null,/choosePayment.do,2" routingType="0">
     <AutomaticBendpoints>
       <AbsolutePoint location="1983,1450" />
