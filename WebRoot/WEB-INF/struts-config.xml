@@ -294,6 +294,9 @@
     <action path="/timeSeries" type="org.springframework.web.struts.DelegatingActionProxy">
       <set-property property="cancellable" value="true" />
     </action>
+    <action path="/index" type="org.springframework.web.struts.DelegatingActionProxy">
+      <set-property property="cancellable" value="true" />
+    </action>
     
     
     
