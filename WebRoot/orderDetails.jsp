@@ -13,10 +13,11 @@
   </head>
   
   <body>
-<div id="northpanel">
+<div id="northpanel" data-role="header">
+		<h1>Order Details</h1>
 		<jsp:include page="/main.jsp" flush="true"></jsp:include>
-		</div>
-		<div id="centerpanel">
+</div>
+		<div id="centerpanel" data-role="content">
 <table>
 <tr><td>BOOK INFORMATION</td></tr>
 <tr>

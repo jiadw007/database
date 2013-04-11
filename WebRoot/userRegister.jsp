@@ -9,7 +9,6 @@
 	    <jsp:include page="/script.jsp" />
 	</head>
 	<body>
-
 		<html:form action="/userRegister">
 		    username : <html:text property="username"/><html:errors property="username"/><br/>
 			lastname : <html:text property="lastname"/><html:errors property="lastname"/><br/>
@@ -26,8 +25,7 @@
 			addressline2 : <html:text property="addressline2"/><html:errors property="addressline2"/><br/>
 			<html:submit/>
 		</html:form>
-		<html:errors property="register"/>
-	
+		<html:errors property="register"/>	
 	</body>
 </html>
 

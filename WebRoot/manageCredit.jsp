@@ -11,7 +11,7 @@
     <title>manageCredit</title>
     <jsp:include page="/script.jsp" />
     <script>
-    	$(function() {
+    	$(document).bind('pageinit', function() {
     		$('.delete').buttonMarkup();
     	});
     </script>	

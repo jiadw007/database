@@ -11,7 +11,7 @@
     <title>manageAddress</title>
     <jsp:include page="/script.jsp" />
     <script>
-    	$(function(){
+    	$(document).bind('pageinit', function() {
     		$('.delete').button();
     	});
     </script>

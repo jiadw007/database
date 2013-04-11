@@ -6,18 +6,31 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
   <head>
-    
     <title>All book information</title>
-   <jsp:include page="/script.jsp" />
+   	<jsp:include page="/script.jsp" />
+ 	<script language="JavaScript">
+ 		$(document).bind('pageinit', function() {
+ 			$(".btn").buttonMarkup();
+ 		});
+       function del()
+       {
+        if(confirm("confirm?")){
+        alert("operate delete");
+        return true;
+        }else{
+        return false;
+        }
+        }
+     </script>
   </head>
   
   <body>
     <div id="northpanel" data-role="header">
     	<h1>All Book Information</h1>
 		<jsp:include page="/employeeMain.jsp" flush="true"></jsp:include>
-		</div>
+	</div>
 	<div id="centerpanel" data-role="content">
-     <table align="center" width="1000" bgColor="#FFFFFF">
+     <table align="center" width="1000" bgColor="#FFFFFF" id="table1" data-role="tableview" data-mode="columntoggle">
      <tr>
      <th align="center" valign="middle" width="100">BOOKSKU</th>
      <th align="center" valign="middle" width="100">ISBN</th>
@@ -37,16 +50,23 @@
      </tr>
      </logic:iterate>
      </table>
-     <div align="center">
-      <html:link action="queryBook.do?PageIndex=1">start</html:link>
+          <div align="center" class='ui-grid-c'>
+     	<div class='ui-block-a'>
+      <html:link action="queryBook.do?PageIndex=1" styleClass='btn'>first</html:link>
+      </div>
+      <div class='ui-block-b'>
      <logic:equal name="pc" property="firstPage" value="false">
-     <html:link action="queryBook.do"paramId="PageIndex" paramName="pc" paramProperty="previousPageIndex">previous</html:link>
+     <html:link action="queryBook.do"paramId="PageIndex" paramName="pc" paramProperty="previousPageIndex" styleClass='btn'>previous</html:link>
      </logic:equal>
+     </div>
+     <div class='ui-block-c'>
      <logic:equal name="pc" property="lastPage" value="false">
-     <html:link action="queryBook.do"paramId="PageIndex" paramName="pc" paramProperty="nextPageIndex">next</html:link>
+     <html:link action="queryBook.do"paramId="PageIndex" paramName="pc" paramProperty="nextPageIndex" styleClass='btn'>next</html:link>
      </logic:equal>
-     <html:link action="queryBook.do"paramId="PageIndex" paramName="pc" paramProperty="pageCount">end</html:link>
-     <br><br><br>
+     </div>
+     <div class='ui-block-d'>
+     <html:link action="queryBook.do"paramId="PageIndex" paramName="pc" paramProperty="pageCount" styleClass='btn'>end</html:link>
+     </div>
      <font style="color: rgb(255, 0, 0);" size="5">
 		<logic:equal name="success" value="1">
 		delete operation successful
@@ -55,15 +75,5 @@
      </div>
 	 </div>
   </body>
-   <script language="JavaScript">
-       function del()
-       {
-        if(confirm("confirm?")){
-        alert("operate delete")
-        return true
-        }else{
-        return false
-        }
-        }
-     </script>
+
 </html>

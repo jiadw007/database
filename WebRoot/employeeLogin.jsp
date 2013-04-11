@@ -13,7 +13,7 @@
 		<html:form action="/employeeLogin"> 
 	    loginname:<html:text property="loginname"></html:text><br />
 		password:<html:password property="password"></html:password><br/>
-			<html:submit/><html:cancel/>
+			<html:submit/><html:reset/>
 		</html:form>
 		<br /><br />
 		<html:errors property="employeelogin"/>

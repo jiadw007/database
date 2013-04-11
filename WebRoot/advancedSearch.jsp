@@ -8,7 +8,7 @@
 		<title>Advanced Search Book</title>
 		<jsp:include page="/script.jsp" />
 		<script>
-			$(function() {
+			$(document).bind('pageinit', function() {
 				$('#year').datebox({
 					"mode" : "calbox",
 					"dateFormat" : "%Y-%m-%d"

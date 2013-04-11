@@ -15,7 +15,7 @@
 		<jsp:include page="/employeeMain.jsp" flush="true"></jsp:include>
 		</div>
 		<div id="centerpanel">
-    <div align="center"><font face="微软雅黑" size="5">ALL ORDER INFORMATION</font></div>
+    <div align="center">ALL ORDER INFORMATION</div>
     <br><br>
      <table align="center" width="1000" bgColor="#FFFFFF">
      <tr>

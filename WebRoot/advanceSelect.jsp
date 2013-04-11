@@ -8,7 +8,7 @@
 <title>advance Select</title>
     <jsp:include page="/script.jsp"></jsp:include>
 <script>
-	$(function() {
+	$(document).bind('pageinit', function() {
 		$('#from').datebox({
 			"mode" : "calbox",
 			"dateFormat" : "%Y-%m-%d"

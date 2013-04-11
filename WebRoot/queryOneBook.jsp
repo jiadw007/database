@@ -9,10 +9,11 @@
 		<jsp:include page="/script.jsp"/>
 	</head>
 	<body>
-	    <div id="northpanel">
+	    <div id="northpanel" data-role="header">
+	    <h1>Query one book</h1>
 		<jsp:include page="/employeeMain.jsp" flush="true"></jsp:include>
 		</div>
-		<div id="centerpanel">
+		<div id="centerpanel" data-role="content">
 		<html:form action="/queryOneBook">
 			BookSKU : <html:text property="booksku"/><html:errors property="booksku"/><br/>
 			<html:submit/><html:cancel/>
