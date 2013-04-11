@@ -51,7 +51,13 @@ public class SelectTopBookAction extends Action {
 			HttpServletRequest request, HttpServletResponse response) {
 		// TODO Auto-generated method stub
 		ArrayList books=edao.selectTopBook();
+		if(books!=null&&books.size()!=0){
 		request.setAttribute("topbook", books);
+		}else{
+			request.setAttribute("topbook", 0);
+			
+		}
+		
 		
 		return new ActionForward("/selectTopBook.jsp");
 	}

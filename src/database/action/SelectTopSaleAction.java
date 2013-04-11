@@ -49,7 +49,12 @@ private IEmployeeDAO edao;
 			HttpServletRequest request, HttpServletResponse response) {
 		// TODO Auto-generated method stub
 		ArrayList sale=edao.selectTopSale();
+		if(sale!=null&&sale.size()!=0){
 		request.setAttribute("topsale", sale);
+		}else{
+			request.setAttribute("topsale", 0);
+		}
+		
 		return new ActionForward("/selectTopSale.jsp");
 	}
 }

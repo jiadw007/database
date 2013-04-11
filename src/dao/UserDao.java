@@ -10,6 +10,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.sql.Timestamp;
 import java.util.ArrayList;
+import java.util.Iterator;
 
 import po.Address;
 import po.Book;
@@ -26,6 +27,7 @@ public class UserDao implements IUserDao{
 		String url="jdbc:oracle:thin:@oracle.cise.ufl.edu:1521:orcl";
 		String sql="select * from Customer where username='"+userName+"'";
 		System.out.println(sql);
+		User user=new User();
 		try{
 			Class.forName("oracle.jdbc.driver.OracleDriver");			
 		}catch(java.lang.ClassNotFoundException e){
@@ -44,11 +46,12 @@ public class UserDao implements IUserDao{
 				String username=rs.getString(6);
 				int defaultbillingaddress=rs.getInt(7);
 				int defaultshippingaddress=rs.getInt(8);
-				User user=new User(id,username,password,passwordsalt,email,time,defaultshippingaddress,defaultbillingaddress);
-				return user;
+				user=new User(id,username,password,passwordsalt,email,time,defaultshippingaddress,defaultbillingaddress);
+				
 			}
 			stmt.close();
 			con.close();
+			return user;
 		}catch(SQLException ex){
 			System.out.println(ex.getMessage());
 		}
@@ -235,9 +238,9 @@ public class UserDao implements IUserDao{
 		if(title!=""){
 			
 			if(sql1!=sql){
-				sql1=sql1+" and booktitle like '%"+title+"%'";
+				sql1=sql1+" and Upper(booktitle) like '%"+title.toUpperCase()+"%'";
 			}else{
-				sql1=sql+"booktitle like '%"+title+"%'";
+				sql1=sql+"Upper(booktitle) like '%"+title.toUpperCase()+"%'";
 			}
 		}
 
@@ -292,6 +295,7 @@ public class UserDao implements IUserDao{
 		//System.out.println(attribute);
 		//System.out.println(value);
 		System.out.println(sql);
+		Book book=new Book();
 		try{
 			Class.forName("oracle.jdbc.driver.OracleDriver");			
 		}catch(java.lang.ClassNotFoundException e){
@@ -311,12 +315,12 @@ public class UserDao implements IUserDao{
 				String description=rs.getString(8);
 				String image=rs.getString(9);
 				String pt=rs.getString(10);
-				Book book=new Book(booksku,isbn,sq,up,booktitle,author,pt,image,description);
-				   
-				return book;
+				book=new Book(booksku,isbn,sq,up,booktitle,author,pt,image,description);   
+				
 			}
 			stmt.close();
 		    con.close();
+		    return book;
 
 		}catch(SQLException ex){
 			System.out.println(ex.getMessage());
@@ -1007,7 +1011,40 @@ public class UserDao implements IUserDao{
 		return null;
 	}
 	
-	
-	
+	public ArrayList selectTopBook() {
+		// TODO Auto-generated method stub
+		String url="jdbc:oracle:thin:@oracle.cise.ufl.edu:1521:orcl";
+		String sql="select isbn from( select sku,booktitle,isbn,count(quantity) sum from orders,book where booksku=sku group by sku,booktitle,isbn order by sum desc) where RowNum<=10";
+		System.out.println(sql);
+		ArrayList ISBNS=new ArrayList();
+		ArrayList books=new ArrayList();
+		try{
+			Class.forName("oracle.jdbc.driver.OracleDriver");			
+		}catch(java.lang.ClassNotFoundException e){
+			System.out.println(e.getMessage());
+		}
+		try{
+			Connection con=DriverManager.getConnection(url,"dawei","jolly900513");
+			Statement stmt=con.createStatement();
+			ResultSet rs=stmt.executeQuery(sql);
+			while(rs.next()){
+				Long isbn=rs.getLong(1);
+				ISBNS.add(isbn.toString());
+			}
+			stmt.close();
+			con.close();
+			Iterator p=ISBNS.iterator();
+			while(p.hasNext()){
+				//System.out.println((String)p.next());
+				Book book=this.queryBook((String)p.next());
+				books.add(book);
+			}
+			return books;
+		}catch(SQLException ex){
+			System.out.println(ex.toString());
+			System.out.println(ex.getMessage());
+		}
+		return null;
+	}
 
 }

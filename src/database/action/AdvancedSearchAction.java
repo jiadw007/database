@@ -57,25 +57,13 @@ public class AdvancedSearchAction extends Action {
 		String author=advancedSearchForm.getAuthor();
 		String title=advancedSearchForm.getTitle();
 		String time=advancedSearchForm.getTime();
-		String month=advancedSearchForm.getMonth();
 		String year=advancedSearchForm.getYear();
 		if(year!=""){
-			if(month!=""){
-				year=year+"-"+month;
-				if(time.equals("After")){
-					year=">'"+year+"-01'";
-				}
-				if(time.equals("Before")){
-					year="<'"+year+"-01'";
-				}
+			if(time.equals("After")){
+				year=">'"+year+"'";
 			}
-			if(month==""){
-				if(time.equals("After")){
-					year=">'"+year+"-01-01'";
-				}
-				if(time.equals("Before")){
-					year="<'"+year+"-01-01'";
-				}
+			if(time.equals("Before")){
+				year="<'"+year+"'";
 			}
 		}
         Books=udao.advancedsearchBook(isbn, author, title, year, time);

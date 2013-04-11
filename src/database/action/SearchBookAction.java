@@ -56,7 +56,7 @@ public class SearchBookAction extends Action {
 		//System.out.println(attribute);
 		//System.out.println(value);
 	    Books=udao.searchBook(attribute, value);
-	    if(Books!=null){
+	    if(Books!=null&Books.size()!=0){
 	    	request.setAttribute("search",1);
 	    	request.setAttribute("searchBook", Books);
 	    }else{
