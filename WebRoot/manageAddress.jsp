@@ -75,7 +75,7 @@
   </html:form>
   </logic:iterate>
   <br />
-  <a href="/addNewAddress.jsp" data-role="button" data-icon="plus" data-theme="b">Add New Address</a><br />
+  <a href="addNewAddress.jsp" data-role="button" data-icon="plus" data-theme="b">Add New Address</a><br />
   <logic:equal name="noAddress"value="1">
   delete address success
   </logic:equal>

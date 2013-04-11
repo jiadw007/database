@@ -17,16 +17,24 @@
 		</div>
 	<div id="centerpanel" data-role="content"> 
     <logic:equal name="choose" value="1">
+    <html:form action="/checkOut">
+    <div data-role="fieldcontain">
+    <fieldset data-role="controlgroup">
+    <legend>Choose a credit card</legend>
+    <% int i=1; %>
     <logic:iterate id="credit" name="creditlist">
     <%Credit c=(Credit)credit; %>
-    <html:form action="/checkOut">
-    <html:radio property="cardnumber" value="<%=String.valueOf(c.getCardNumber())%>">
-    <bean:write name="credit" property="cardNumber"/>
-    </html:radio><br />
+    <html:radio property="cardnumber" value="<%=String.valueOf(c.getCardNumber())%>" styleId="<%="test" + i%>">
+    <!-- <bean:write name="credit" property="cardNumber"/> -->
+    </html:radio>
+    <label for="test<%=i%>"><%=String.valueOf(c.getCardNumber())%></label>
+    <% i++; %>
+    </logic:iterate>
+    </fieldset>
+    </div>
     <html:text property="cvv2"></html:text><br>
     <html:submit value="Checkout"/>
     </html:form>
-    </logic:iterate>
     </logic:equal>
     <logic:equal name="choose" value="0">
     No address, please add a new credit <html:link page="/addNewCredit.jsp">Add New Credit</html:link>

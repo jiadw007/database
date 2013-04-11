@@ -10,6 +10,11 @@
   <head>
     <title>manageCredit</title>
     <jsp:include page="/script.jsp" />
+    <script>
+    	$(function() {
+    		$('.delete').buttonMarkup();
+    	});
+    </script>	
   </head>
   
   <body>
@@ -79,11 +84,16 @@
   <td><bean:write name="credit" property="addressline2"/></td>
   </tr>
   </table>
-  <html:submit value="Edit" /><html:link action="/deleteCredit.do" paramId="cid" paramName="credit" paramProperty="cardNumber">Delete</html:link>
+  <div class="ui-grid-a">
+  	<div class="ui-block-a">
+  <html:submit value="Edit" />
+  </div><div class="ui-block-b">
+  <html:link action="/deleteCredit.do" paramId="cid" paramName="credit" paramProperty="cardNumber" styleClass="delete">Delete</html:link>
+  </div>
+  </div>
   </html:form>
   </logic:iterate>
-  <br />
-  <html:link page="/addNewCredit.jsp">Add New CreditCard</html:link><br />
+  <a href="addNewCredit.jsp" data-role="button" data-theme="b" data-icon="plus">Add New CreditCard</a><br />
   <logic:equal name="noCredit"value="1">
   delete credit card success
   </logic:equal>

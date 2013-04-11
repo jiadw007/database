@@ -52,8 +52,8 @@
 		</logic:equal>
 		</logic:present>
 		<logic:notEmpty name="shoppingcart">
-		<html:link page="/queryShoppingCart.jsp">Shopping Cart</html:link>
-		<html:link page="/queryShoppingCart.jsp">CHECK OUT</html:link>
+		<!-- <html:link page="/queryShoppingCart.jsp">Shopping Cart</html:link>
+		<html:link page="/queryShoppingCart.jsp">CHECK OUT</html:link> -->
 		</logic:notEmpty>
 		</div>
 		</div>

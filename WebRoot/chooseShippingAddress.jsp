@@ -20,7 +20,7 @@
     <logic:iterate id="addr" name="addresslist">
     <%Address a=(Address)addr; %>
     <html:form action="/choosePayment" method="GET">
-    <html:radio property="aid" value="<%=String.valueOf(a.getId()) %>">
+    <!-- <html:radio property="aid" value="<%// =String.valueOf(a.getId()) %>"> -->
     <table>
   <tr>
   <td>first name:</td>
@@ -60,7 +60,8 @@
   </tr>
   </table>
     </html:radio>
-    <html:submit value="Use This Address"/>
+    <!--  <html:submit value="Use This Address"/> -->
+    <a href="choosePayment.do?aid=<%=String.valueOf(a.getId())%>" data-role="button" data-theme="e">Use This Address</a>
     </html:form>
     </logic:iterate>
     </logic:equal>

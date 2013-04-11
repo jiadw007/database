@@ -59,6 +59,6 @@ public class AddToShoppingCartAction extends Action {
 		Order order=new Order(uid,booksku,quantity,status,time,amount);
 		shoppingcart.add(order);
 		request.getSession().setAttribute("shoppingcart", shoppingcart);
-		return new ActionForward("/searchBook.jsp");
+		return new ActionForward("/index.do");
 	}
 }

@@ -8,10 +8,10 @@
 		<jsp:include page="/script.jsp" />
 	</head>
 	<body>
-	<div id="northpanel">
+	<div id="northpanel" data-role="header">
 		<jsp:include page="/main.jsp" flush="true"></jsp:include>
 		</div>
-		<div id="centerpanel">
+		<div id="centerpanel" data-role="content">
 		<html:form action="/addNewCredit"> 
 		    cardNumber : <html:text property="cardnumber"/><html:errors property="cardnumber"/><br/>
 		    name on card : <html:text property="nameoncard"/><html:errors property="nameoncard"/><br/>
