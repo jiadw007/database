@@ -5,23 +5,22 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
   <head>
-  
-    
     <title>book Information</title>
     <jsp:include page="/script.jsp" />
   </head>
-  
   <body>
-  <div id="northpanel">
+  	<div data-role="page">
+  	<div id="northpanel" data-role="header">
+  		<h1>Book Details</h1>
 		<jsp:include page="/main.jsp" flush="true"></jsp:include>
 		</div>
-		<div id="centerpanel">
+	<div id="centerpanel" data-role="content">
     <logic:equal name="search" value="1">
     <%Book b=(Book)request.getSession().getAttribute("searchBook"); 
       System.out.println(b);
       String img=b.getFile();
       %>
-		<table>
+		<table style="align: middle">
 		<tr>
 		<td>ISBN:</td>
 		<td><bean:write name="searchBook" property="isbn"/></td>
@@ -77,8 +76,10 @@
 		</tr>
 		</logic:iterate>
 		</table>
-		<html:link page="/addToShoppingCart.jsp">Add to Cart</html:link>
+		
+		<a href="addToShoppingCart.jsp" data-role="button" data-icon="plus" data-theme="e">Add to Cart 2</a>
 		</logic:equal>
+		</div>
 		</div>
   </body>
 </html>

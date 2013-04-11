@@ -25,7 +25,7 @@
 		</div>
 	</div>
 	<div data-role="content">
-		<html:form action="/advancedSearch"> 
+		<html:form action="/advancedSearch" method="GET"> 
 		    ISBN : <html:text property="isbn"/><html:errors property="isbn"/><br/>
 			AUTHOR : <html:text property="author"/><html:errors property="author"/><br/>
 			TITLE : <html:text property="title"/><html:errors property="title"/><br/>

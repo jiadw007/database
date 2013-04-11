@@ -2,6 +2,7 @@
 <%@ taglib uri="http://struts.apache.org/tags-bean" prefix="bean"%> 
 <%@ taglib uri="http://struts.apache.org/tags-html" prefix="html"%>
 <%@ taglib uri="http://struts.apache.org/tags-logic" prefix="logic"%>
+	  <a href="index.jsp" data-icon="home">Home</a> 
 	  <a href="#popupMenu" data-rel="popup" data-role="button" data-inline="true" data-transition="slideup" data-icon="gear" data-theme="e" class="ui-btn-right">Actions...</a>
       <div data-role="popup" id="popupMenu" data-theme="d">
       <ul data-role="listview" data-inset="true" style="min-width:210px;" data-theme="d">

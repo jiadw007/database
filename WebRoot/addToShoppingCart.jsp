@@ -8,10 +8,11 @@
 		<jsp:include page="/script.jsp" />
 	</head>
 	<body>
-	    <div id="northpanel">
+	    <div id="northpanel" data-role="header">
+	    <h1>Add to Shopping Cart</h1>
 		<jsp:include page="/main.jsp" flush="true"></jsp:include>
 		</div>
-		<div id="centerpanel">
+		<div id="centerpanel" data-role="content">
 		<html:form action="/addToShoppingCart">
 		<table>
 		<tr>
