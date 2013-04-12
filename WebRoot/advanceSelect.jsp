@@ -7,19 +7,18 @@
 <head>
 <title>advance Select</title>
     <jsp:include page="/script.jsp"></jsp:include>
-<script>
-	$(function() {
-		$('#from').datebox({
-			"mode" : "calbox",
-			"dateFormat" : "%Y-%m-%d"
+	<script>
+		$(function() {
+			$('#from').datebox({
+				"mode" : "calbox",
+				"dateFormat" : "%Y-%m-%d"
+			});
+			$('#to').datebox({
+				"mode" : "calbox",
+				"dateFormat" : "%Y-%m-%d"
+			});
 		});
-		$('#to').datebox({
-			"mode" : "calbox",
-			"dateFormat" : "%Y-%m-%d"
-		});
-	});
-</script>
-
+	</script>
 </head>
 
 <body>
@@ -32,10 +31,10 @@
 	</div>
 	<div data-role="content">
 	<div id="centerpanel">
-	<html:form action="/advanceSelect">
+	<html:form action="/advanceSelect" method="GET">
 	<div data-role="fieldcontain">
     <label for="from">From:</label>
-    <html:text property="from" styleId="from"></html:text></div>
+    <html:text property="from" styleId="from"></html:text></div> 
     <div data-role="fieldcontain">
     <label for="to">To:</label>
     <html:text property="to" styleId="to"></html:text></div>

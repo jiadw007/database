@@ -9,11 +9,12 @@
 		<jsp:include page="/script.jsp"/>
 	</head>
 	<body>
-	   <div id="northpanel">
+	   <div id="northpanel" data-role="header">
+	   	<h1>Order Information</h1>
 		<jsp:include page="/employeeMain.jsp" flush="true"></jsp:include>
 		</div>
 		<div id="centerpanel">
-		<html:form action="/queryOneOrder">
+		<html:form action="/queryOneOrder" method="GET">
 			Order ID: <html:text property="id"/><html:errors property="id"/><br/>
 			<html:submit/><html:cancel/>
 		</html:form>
