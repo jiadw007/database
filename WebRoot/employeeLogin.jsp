@@ -9,10 +9,15 @@
 		<jsp:include page="/script.jsp" />
 	</head>
 	<body>
-
+		<div data-role='header'>
+			<h1>Employee Login</h1>
+			<jsp:include page="/employeeMain.jsp" flush="true"></jsp:include>
+		</div>
 		<html:form action="/employeeLogin"> 
-	    loginname:<html:text property="loginname"></html:text><br />
-		password:<html:password property="password"></html:password><br/>
+		<div data-role="fieldcontain">
+	    <label for="loginname">Login Name</label><html:text property="loginname" styleId="loginname"></html:text></div>
+		<div data-role="fieldcontain">
+		<label for="password">Password</label><html:password property="password" styleId="password"></html:password></div>
 			<html:submit/><html:reset/>
 		</html:form>
 		<br /><br />

@@ -67,10 +67,10 @@
        function del()
        {
         if(confirm("confirm?")){
-        alert("operate delete")
-        return true
+        alert("operate delete");
+        return true;
         }else{
-        return false
+        return false;
         }
         }
      </script>

@@ -8,7 +8,7 @@
 <title>advance Select</title>
     <jsp:include page="/script.jsp"></jsp:include>
 <script>
-	$(document).bind('pageinit', function() {
+	$(function() {
 		$('#from').datebox({
 			"mode" : "calbox",
 			"dateFormat" : "%Y-%m-%d"
@@ -33,10 +33,12 @@
 	<div data-role="content">
 	<div id="centerpanel">
 	<html:form action="/advanceSelect">
-    From:
-    <html:text property="from" styleId="from"></html:text>
-    To:
-    <html:text property="to" styleId="to"></html:text>
+	<div data-role="fieldcontain">
+    <label for="from">From:</label>
+    <html:text property="from" styleId="from"></html:text></div>
+    <div data-role="fieldcontain">
+    <label for="to">To:</label>
+    <html:text property="to" styleId="to"></html:text></div>
 	<div class="ui-grid-a">
 		<div class="ui-block-a">
 			<html:select property="method" value="book">

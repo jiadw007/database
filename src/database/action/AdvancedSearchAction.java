@@ -58,13 +58,14 @@ public class AdvancedSearchAction extends Action {
 		String title=advancedSearchForm.getTitle();
 		String time=advancedSearchForm.getTime();
 		String year=advancedSearchForm.getYear();
-		if(year!=""){
+		if(year != ""){
 			if(time.equals("After")){
 				year=">'"+year+"'";
 			}
 			if(time.equals("Before")){
 				year="<'"+year+"'";
 			}
+			else year="";
 		}
         Books=udao.advancedsearchBook(isbn, author, title, year, time);
         request.getSession().setAttribute("Books", Books);

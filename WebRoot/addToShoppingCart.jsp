@@ -33,7 +33,7 @@
 		</tr>
 		<tr>
 		<td>Quantity:</td>
-		<td><html:text property="quantity"></html:text></td>
+		<td><html:text property="quantity" value="1"></html:text></td>
 		</tr>
 		</table>
 	    <html:submit value="Add to Cart"/>

@@ -11,10 +11,11 @@
   </head>
   
   <body>
-  <div id="northpanel">
+  	<div id="northpanel" data-role="header">
+  		<h1>Top 10 Supplier</h1>
 		<jsp:include page="/employeeMain.jsp" flush="true"></jsp:include>
-		</div>
-		<div id="centerpanel">
+	</div>
+		<div id="centerpanel" data-role="content">
     <table>
     <tr>
     <td>NO.</td>

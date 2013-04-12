@@ -30,7 +30,7 @@
 			    </div>		
 		</div>
 	    <html:submit value="Search"/>
-	    <a href="/advancedSearch.jsp" data-role="button" data-theme="e" data-icon="forward">Advanced search</a>
+	    <a href="advancedSearch.jsp" data-role="button" data-theme="e" data-icon="forward">Advanced search</a>
 		</html:form><br>
 		<logic:present name="search">
 		<logic:equal name="search" value="1">

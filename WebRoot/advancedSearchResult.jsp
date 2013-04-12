@@ -9,6 +9,13 @@
     <jsp:include page="/script.jsp" />
     <script src="" language="Javascript">
     </script>
+    <script language="JavaScript">
+  	    $(document).bind('pageinit', function() {
+    		$(".mybtn1").buttonMarkup({
+    			"inline": "true"
+    		});
+    	});
+    </script>
   </head>
   <body>
   <div data-roel='page'>
@@ -37,15 +44,25 @@
 		</tr>
     </logic:iterate>
     </table>
-    <html:link action="advancedQuery.do?PageIndex=1">start</html:link>
+        <div align="center" class='ui-grid-c'>
+     	<div class='ui-block-a'>
+    <html:link action="advancedQuery.do?PageIndex=1" styleClass="mybtn1">start</html:link>
+    </div>
+    <div class='ui-block-b'>
      <logic:equal name="pc" property="firstPage" value="false">
-     <html:link action="advancedQuery.do"paramId="PageIndex" paramName="pc" paramProperty="previousPageIndex">previous</html:link>
+     <html:link action="advancedQuery.do"paramId="PageIndex" paramName="pc" paramProperty="previousPageIndex" styleClass="mybtn1">previous</html:link>
      </logic:equal>
+     </div>
+     <div class='ui-block-c'>
      <logic:equal name="pc" property="lastPage" value="false">
-     <html:link action="advancedQuery.do"paramId="PageIndex" paramName="pc" paramProperty="nextPageIndex">next</html:link>
+     <html:link action="advancedQuery.do"paramId="PageIndex" paramName="pc" paramProperty="nextPageIndex" styleClass="mybtn1">next</html:link>
      </logic:equal>
-     <html:link action="advancedQuery.do"paramId="PageIndex" paramName="pc" paramProperty="pageCount">end</html:link>
-    </logic:equal>
+     </div>
+     <div class='ui-block-d'>
+     <html:link action="advancedQuery.do"paramId="PageIndex" paramName="pc" paramProperty="pageCount" styleClass="mybtn1">end</html:link>
+     </div>
+     </div>
+    <!--</logic:equal> -->
     <logic:equal name="advancedSearch" value="0">
 		We are sorry for no results for you
 	</logic:equal>

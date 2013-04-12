@@ -63,6 +63,6 @@ public class employeeLoginAction extends Action {
 			return mapping.getInputForward();
 		}
 		request.getSession().setAttribute("employee",employee);
-		return new ActionForward("/employeeMain.jsp");
+		return new ActionForward("/timeSeries.do");
 	}
 }

@@ -53,29 +53,17 @@
 		<td>IMAGE</td>
 		<td><img src="<%=b.getFile()%>"></td>
 		</tr>
-		<logic:iterate id="review" name="reviews">
-		<tr>
-		<td>Review Title</td>
-		<td><bean:write name="review" property="title"/></td>
-		</tr>
-		<tr>
-		<td>Username</td>
-		<td><bean:write name="review" property="username"/></td>
-		</tr>
-		<tr>
-		<td>rating</td>
-		<td><bean:write name="review" property="rating"/></td>
-		</tr>
-		<tr>
-		<td>Review Date</td>
-		<td><bean:write name="review" property="reviewondate"/></td>
-		</tr>
-		<tr>
-		<td>Body</td>
-		<td><bean:write name="review" property="body"/></td>
-		</tr>
-		</logic:iterate>
 		</table>
+
+		<logic:iterate id="review" name="reviews">
+		<div data-role="collapsible" data-theme="a" data-content-theme="a">
+   		<h3><bean:write name="review" property="title"/>&nbsp;From&nbsp;<bean:write name="review" property="username"/></h3>
+   		<p><bean:write name="review" property="body"/></p>
+   		<p>Rating: <bean:write name="review" property="rating"/></p>
+   		<p>On <bean:write name="review" property="reviewondate"/></p>
+		</div>		
+		</logic:iterate>
+		
 		<a href="addToShoppingCart.jsp" data-role="button" data-icon="plus" data-theme="e">Add to Cart</a>
 		</logic:equal>
 		</div>
