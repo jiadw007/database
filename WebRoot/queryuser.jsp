@@ -11,7 +11,7 @@
 	<jsp:include page="/script.jsp" />
 	<script>
 		$(function(){
-			$("a").buttonMarkup();
+			$(".btn").buttonMarkup();
 			$(".delete").buttonMarkup({"icon": "minus"});
 		});
 	</script>
