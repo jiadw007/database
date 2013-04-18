@@ -5,7 +5,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
   <head>
-    <title>Time Series</title>
+    <title>Overall Status</title>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script type="text/javascript">
       google.load("visualization", "1", {packages:["corechart"]});
@@ -39,8 +39,20 @@
   		<h1>Sales Overview</h1>
 		<jsp:include page="/employeeMain.jsp" flush="true"></jsp:include>
 	</div>
-		<div id="centerpanel" data-role="content">
+		<div id="centerpanel" data-role="content" align="center">
 		<div id="table-div" style='{height: 500px}'></div>
+		<table>
+		<tr>
+			<th>Table Name</th>
+			<th>Row Count</th>
+		</tr>
+		<logic:iterate id="count" name="count">
+		<tr>
+			<td><bean:write name="count" property="tableName" /></td>
+			<td><bean:write name="count" property="count" /></td>
+		</tr>
+		</logic:iterate>
+		</table>	
     <logic:equal name="stats" value="1">
     NO STATS
     </logic:equal>

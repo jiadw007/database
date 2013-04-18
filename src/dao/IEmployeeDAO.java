@@ -47,5 +47,7 @@ public interface IEmployeeDAO {
 	public abstract ArrayList advanceSelectTopSupplier(String from,String to);
 	
 	public abstract ArrayList timeseries();
+	
+	public abstract ArrayList dbStatus();
 
 }

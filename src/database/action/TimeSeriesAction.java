@@ -56,6 +56,10 @@ public class TimeSeriesAction extends Action {
 		}else{
 			request.setAttribute("stats", 1);
 		}
+		ArrayList count=edao.dbStatus();
+		if(count!=null&&count.size()!=0){
+			request.setAttribute("count", count);
+		}
 		return new ActionForward("/timeSeries.jsp");
 	}
 }

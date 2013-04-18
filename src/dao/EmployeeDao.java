@@ -16,6 +16,7 @@ import po.Employee;
 import po.Order;
 import po.User;
 import po.timeSeries;
+import po.dbStatus;
 
 public class EmployeeDao implements IEmployeeDAO {
 
@@ -681,7 +682,37 @@ public class EmployeeDao implements IEmployeeDAO {
 		
 	}
 
-	
+	public ArrayList dbStatus() {
+		// TODO Auto-generated method stub
+		String url="jdbc:oracle:thin:@oracle.cise.ufl.edu:1521:orcl";
+		String sql="SELECT table_name,to_number(extractvalue(xmltype(dbms_xmlgen.getxml('select count(*) c from ' || table_name)),'/ROWSET/ROW/C')) Count FROM all_tables where owner = 'DAWEI'";
+		System.out.println(sql);
+		ArrayList db=new ArrayList();
+		try{
+			Class.forName("oracle.jdbc.driver.OracleDriver");			
+		}catch(java.lang.ClassNotFoundException e){
+			System.out.println(e.getMessage());
+		}
+		try{
+			Connection con=DriverManager.getConnection(url,"dawei","jolly900513");
+			Statement stmt=con.createStatement();
+			ResultSet rs=stmt.executeQuery(sql);
+			while(rs.next()){
+				String tableName=rs.getString(1);
+				int count=rs.getInt(2);
+				dbStatus t=new dbStatus(tableName, count);
+				db.add(t);
+			}
+			stmt.close();
+			con.close();
+			return db;
+		}catch(SQLException ex){
+			System.out.println(ex.toString());
+			System.out.println(ex.getMessage());
+		}
+		return null;
+		
+	}
     
 	
 
