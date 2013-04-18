@@ -13,7 +13,7 @@
 			<h1>Employee Login</h1>
 			<jsp:include page="/employeeMain.jsp" flush="true"></jsp:include>
 		</div>
-		<html:form action="/employeeLogin"> 
+		<html:form action="/employeeLogin" method="get"> 
 		<div data-role="fieldcontain">
 	    <label for="loginname">Login Name</label><html:text property="loginname" styleId="loginname"></html:text></div>
 		<div data-role="fieldcontain">

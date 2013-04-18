@@ -10,19 +10,22 @@
 	<body>
 		<html:form action="/register"> 
 		 
-			username : <html:text property="username"/><html:errors property="username"/><br/>
-			firstname : <html:text property="firstname"/><html:errors property="firstname"/><br/>
-			lastname : <html:text property="lastname"/><html:errors property="lastname"/><br/>
-			password : <html:password property="password"/><html:errors property="password"/><br/>
-			passwordsalt : <html:text property="passwordsalt"/><html:errors property="passwordsalt"/><br/>
-			email : <html:text property="email"/><html:errors property="email"/><br/>			
-			phone : <html:text property="phone"/><html:errors property="phone"/><br/>
-			state: <html:text property="state"/><html:errors property="state"/><br/>
-			city: <html:text property="city"/><html:errors property="city"/><br/>
-			zipcode: <html:text property="zipcode" value=""/><html:errors property="zipcode"/><br/>
-			company: <html:text property="company"/><html:errors property="company"/><br/>
-			addressline1 : <html:text property="addressline1"/><html:errors property="addressline1"/><br/>
-			addressline2 : <html:text property="addressline2"/><html:errors property="addressline2"/><br/>
+			<h2>Basic Information</h2>		
+		    <div data-role="fieldcontain"><label for="username">Username</label><html:text property="username" styleId="username"/><html:errors property="username"/></div>
+			<div data-role="fieldcontain"><label for="password">Password</label><html:password property="password" styleId="password"/><html:errors property="password"/></div>
+			<div data-role="fieldcontain"><label for="passwordsalt">Password Salt</label><html:text property="passwordsalt" styleId="passwordsalt"/><html:errors property="passwordsalt"/></div>
+			<h2>More About You</h2>
+			<div data-role="fieldcontain"><label for="firstname">First Name</label><html:text property="firstname" styleId="firstname"/><html:errors property="firstname"/></div>
+			<div data-role="fieldcontain"><label for="lastname">Last Name</label><html:text property="lastname" styleId="lastname"/><html:errors property="lastname"/></div>
+			<div data-role="fieldcontain"><label for="email">Email</label><html:text property="email" styleId="email"/><html:errors property="email"/></div>			
+			<h2>Address</h2>
+			<div data-role="fieldcontain"><label for="phone">Phone</label><html:text property="phone" styleId="phone"/><html:errors property="phone"/></div>
+			<div data-role="fieldcontain"><label for="state">State</label><html:text property="state" styleId="state"/><html:errors property="state"/></div>
+			<div data-role="fieldcontain"><label for="city">City</label><html:text property="city" styleId="city"/><html:errors property="city"/></div>
+			<div data-role="fieldcontain"><label for="zipcode">Zipcode</label><html:text property="zipcode" value="" styleId="zipcode"/><html:errors property="zipcode"/></div>
+			<div data-role="fieldcontain"><label for="company">Company</label><html:text property="company" styleId="company"/><html:errors property="company"/></div>
+			<div data-role="fieldcontain"><label for="addressline1">Address Line 1</label><html:text property="addressline1" styleId="addressline1"/><html:errors property="addressline1"/></div>
+			<div data-role="fieldcontain"><label for="addressline2">Address Line 2</label><html:text property="addressline2" styleId="addressline2"/><html:errors property="addressline2"/></div>
 			<html:submit/>
 		</html:form>
 		<html:errors property="register"/>

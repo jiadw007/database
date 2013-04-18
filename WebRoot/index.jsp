@@ -17,7 +17,7 @@
 	</div>
 	<div id="centerpanel" data-role="content">
 	  <div style="margin: 10px">
-	  	<a href="userRegister.jsp" data-role="button" data-icon="forward" data-theme="e">New Customer</a>
+	  	<a href="register.jsp" data-role="button" data-icon="forward" data-theme="e">New Customer</a>
 	  	<br>
 	  </div>
 	  <div>

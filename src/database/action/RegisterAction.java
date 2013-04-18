@@ -58,8 +58,8 @@ public class RegisterAction extends Action {
 		RegisterForm registerform= (RegisterForm) form;
 		String username=registerform.getUsername();
 		User user=udao.getUserByUsername(username);
-		System.out.println("1111");
-		if(user==null){
+		System.out.println(user.getUsername());
+		if(user.getUsername()==null){
 			
 			String firstname=registerform.getFirstname();
 			String lastname=registerform.getLastname();
@@ -81,10 +81,11 @@ public class RegisterAction extends Action {
 			boolean flag1=udao.insertAddress(address);
 			User user2=new User(username,password,passwordsalt,email,timestamp);
 			boolean flag2=udao.insertUser(user2);
-			//System.out.println("insert");
+			System.out.println(flag1);
+			System.out.println(flag2);
 			request.getSession().setAttribute("user",user);
 			if(flag1 &&flag2){
-				return new ActionForward("/index.jsp");
+				return new ActionForward("/index.html");
 			}else{
 				ActionMessages errors=new ActionMessages();
 				ActionMessage error=new ActionMessage("error.register",username);
