@@ -10,5 +10,7 @@
 	<classpathentry kind="con" path="melibrary.com.genuitec.eclipse.springframework.MYECLIPSE_SPRING12_WEB"/>
 	<classpathentry kind="con" path="melibrary.com.genuitec.eclipse.springframework.MYECLIPSE_SPRING12_DAO"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/orcl"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/ojdbc"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/jdbc"/>
 	<classpathentry kind="output" path="WebRoot/WEB-INF/classes"/>
 </classpath>
