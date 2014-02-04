@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/userLogin.do" location="180,60" dimension="320,104" />
+  <StrutsActivity path="/employeeLogin.do" location="950,50" dimension="167,104" />
+  <StrutsActivity path="/register.do" location="50,250" dimension="221,104" />
+  <StrutsActivity path="/insertBook.do" location="950,250" dimension="237,104" />
+  <StrutsActivity path="/userRegister.do" location="650,450" dimension="134,104" />
+  <StrutsActivity path="/queryUser.do" location="50,650" dimension="235,104" />
+  <StrutsActivity path="/deleteUser.do" location="350,650" dimension="237,104" />
+  <StrutsActivity path="/queryBook.do" location="650,650" dimension="239,104" />
+  <StrutsActivity path="/queryOrder.do" location="950,650" dimension="243,104" />
+  <StrutsActivity path="/updateBook.do" location="50,850" dimension="247,104" />
+  <StrutsActivity path="/queryOneBook.do" location="650,850" dimension="263,104" />
+  <StrutsActivity path="/searchBook.do" location="350,1050" dimension="243,104" />
+  <StrutsActivity path="/advancedSearch.do" location="950,1050" dimension="269,104" />
+  <StrutsActivity path="/advancedQuery.do" location="350,1250" dimension="265,104" />
+  <StrutsActivity path="/bookInformation.do" location="1250,450" dimension="272,104" />
+  <StrutsActivity path="/updateUser.do" location="1250,650" dimension="243,104" />
+  <StrutsActivity path="/updateAddress.do" location="950,1250" dimension="264,104" />
+  <StrutsActivity path="/manageAddress.do" location="350,1450" dimension="269,104" />
+  <StrutsActivity path="/addNewAddress.do" location="950,1450" dimension="271,104" />
+  <StrutsActivity path="/checkAddress.do" location="350,1650" dimension="256,104" />
+  <StrutsActivity path="/deleteAddress.do" location="1250,1650" dimension="258,104" />
+  <StrutsActivity path="/addNewCredit.do" location="1550,650" dimension="258,104" />
+  <StrutsActivity path="/manageCredit.do" location="1550,1050" dimension="256,104" />
+  <StrutsActivity path="/deleteCredit.do" location="1550,1250" dimension="245,104" />
+  <StrutsActivity path="/checkCredit.do" location="1550,1450" dimension="243,104" />
+  <StrutsActivity path="/updateCredit.do" location="350,1850" dimension="251,104" />
+  <StrutsActivity path="/checkOrder.do" location="1250,1850" dimension="243,104" />
+  <StrutsActivity path="/checkDetails.do" location="1550,1850" dimension="247,104" />
+  <StrutsActivity path="/addToShoppingCart.do" location="50,2050" dimension="292,104" />
+  <StrutsActivity path="/checkOut.do" location="950,2050" dimension="229,104" />
+  <StrutsActivity path="/chooseShippingAddress.do" location="1850,850" dimension="316,104" />
+  <StrutsActivity path="/choosePayment.do" location="1850,1250" dimension="266,104" />
+  <StrutsActivity path="/selectTopBook.do" location="1850,1850" dimension="261,104" />
+  <StrutsActivity path="/selectTopBuyer.do" location="1250,2050" dimension="263,104" />
+  <StrutsActivity path="/selectTopSale.do" location="1850,2050" dimension="254,104" />
+  <StrutsActivity path="/selectTopSupplier.do" location="50,2250" dimension="278,104" />
+  <StrutsActivity path="/queryOneOrder.do" location="650,2250" dimension="267,104" />
+  <StrutsActivity path="/updateOrder.do" location="1550,2250" dimension="251,104" />
+  <StrutsActivity path="/advanceSelect.do" location="350,2450" dimension="256,104" />
+  <StrutsActivity path="/timeSeries.do" location="1250,2450" dimension="236,104" />
+  <StrutsActivity path="/index.do" location="2150,1050" dimension="205,104" />
+  <StrutsActivity path="/userLogin.jsp" location="650,50" dimension="114,53" />
+  <StrutsActivity path="/employeeLogin.jsp" location="350,250" dimension="146,53" />
+  <StrutsActivity path="/register.jsp" location="650,250" dimension="102,53" />
+  <StrutsActivity path="/insertBook.jsp" location="350,450" dimension="120,53" />
+  <StrutsActivity path="/userRegister.jsp" location="950,450" dimension="130,53" />
+  <StrutsActivity path="/queryOneBook.jsp" location="50,1050" dimension="145,53" />
+  <StrutsActivity path="/searchBook.jsp" location="650,1050" dimension="126,53" />
+  <StrutsActivity path="/advancedSearch.jsp" location="50,1250" dimension="152,53" />
+  <StrutsActivity path="/updateUser.jsp" location="1250,850" dimension="125,53" />
+  <StrutsActivity path="/updateAddress.jsp" location="50,1450" dimension="146,53" />
+  <StrutsActivity path="/addNewAddress.jsp" location="50,1650" dimension="154,53" />
+  <StrutsActivity path="/manageAddress.jsp" location="950,1650" dimension="152,53" />
+  <StrutsActivity path="/addNewCredit.jsp" location="1550,850" dimension="141,53" />
+  <StrutsActivity path="/manageCredit.jsp" location="50,1850" dimension="139,53" />
+  <StrutsActivity path="/updateCredit.jsp" location="950,1850" dimension="133,53" />
+  <StrutsActivity path="/addToShoppingCart.jsp" location="650,2050" dimension="175,53" />
+  <StrutsActivity path="/choosePayment.jsp" location="1800,1665" dimension="148,53" />
+  <StrutsActivity path="/chooseShippingAddress.jsp" location="1850,1450" dimension="198,53" />
+  <StrutsActivity path="/queryOneOrder.jsp" location="1250,2250" dimension="149,53" />
+  <StrutsActivity path="/advanceSelect.jsp" location="950,2450" dimension="139,53" />
+  <StrutsActivity path="/updateOrder.jsp" location="50,2450" dimension="133,53" />
+  <StrutsActivity path="/updateBook.jsp" location="350,850" dimension="129,53" />
+  <StrutsActivity path="/insertBook" location="50,450" dimension="100,53" />
+  <StrutsTransition id="/chooseShippingAddress.jsp,null,/choosePayment.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1983,1450" />
+      <AbsolutePoint location="1983,1354" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/userLogin.jsp,null,/userLogin.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="650,76" />
+      <AbsolutePoint location="500,76" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/searchBook.jsp,null,/searchBook.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="650,1076" />
+      <AbsolutePoint location="593,1076" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/advancedSearch.jsp,null,/advancedSearch.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="126,1250" />
+      <AbsolutePoint location="126,1199" />
+      <AbsolutePoint location="1084,1199" />
+      <AbsolutePoint location="1084,1154" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/queryOneBook.jsp,null,/updateBook.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="122,1076" />
+      <AbsolutePoint location="173,902" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/queryOneOrder.jsp,null,/updateOrder.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1324,2276" />
+      <AbsolutePoint location="1675,2302" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/choosePayment.jsp,null,/checkOut.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1874,1665" />
+      <AbsolutePoint location="1874,1599" />
+      <AbsolutePoint location="1117,1599" />
+      <AbsolutePoint location="1117,2050" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/employeeLogin.jsp,null,/employeeLogin.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="423,250" />
+      <AbsolutePoint location="423,209" />
+      <AbsolutePoint location="1033,209" />
+      <AbsolutePoint location="1033,154" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/updateUser.jsp,null,/updateUser.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1312,850" />
+      <AbsolutePoint location="1312,754" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/userRegister.jsp,null,/userRegister.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="950,476" />
+      <AbsolutePoint location="784,476" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/addToShoppingCart.jsp,null,/addToShoppingCart.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="650,2076" />
+      <AbsolutePoint location="342,2076" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/queryOneBook.jsp,null,/queryOneBook.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="122,1050" />
+      <AbsolutePoint location="122,999" />
+      <AbsolutePoint location="791,999" />
+      <AbsolutePoint location="791,954" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/manageAddress.jsp,null,/checkAddress.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="478,1702" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/manageCredit.jsp,null,/checkCredit.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="97,1850" />
+      <AbsolutePoint location="97,1769" />
+      <AbsolutePoint location="1671,1769" />
+      <AbsolutePoint location="1671,1554" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/register.jsp,null,/register.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="701,303" />
+      <AbsolutePoint location="701,318" />
+      <AbsolutePoint location="271,318" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/queryOneOrder.jsp,null,/queryOneOrder.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1250,2276" />
+      <AbsolutePoint location="917,2276" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/addNewCredit.jsp,null,/addNewCredit.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1620,850" />
+      <AbsolutePoint location="1620,754" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/insertBook.jsp,null,/insertBook.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="410,450" />
+      <AbsolutePoint location="410,348" />
+      <AbsolutePoint location="950,348" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/updateCredit.jsp,null,/updateCredit.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="950,1876" />
+      <AbsolutePoint location="601,1876" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/advanceSelect.jsp,null,/advanceSelect.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="950,2476" />
+      <AbsolutePoint location="606,2476" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/updateAddress.jsp,null,/updateAddress.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="123,1450" />
+      <AbsolutePoint location="123,1399" />
+      <AbsolutePoint location="1082,1399" />
+      <AbsolutePoint location="1082,1354" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/addNewAddress.jsp,null,/addNewAddress.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="127,1703" />
+      <AbsolutePoint location="127,1829" />
+      <AbsolutePoint location="1085,1829" />
+      <AbsolutePoint location="1085,1554" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+
